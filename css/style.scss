@@ -1,0 +1,326 @@
+@import url('https://cdn.jsdelivr.net/npm/destyle.css@2.0.2/destyle.css');
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&display=swap');
+
+// variable, function -------------------------------
+
+$bg-color: #eee6de;
+$main-color: #9f2624;
+$bg-texture: url('../images/bg_texture.png');
+$btn-color: #D9AB42;
+$header-size: 280px;
+$text: #5a494c;
+
+.ChangeButtonsBg {
+    &::before {
+        display: block;
+        content: '';
+        position: absolute;
+        top:0;
+        left:0;
+        bottom:0;
+        right:0;
+        transition: .2s;
+        z-index: -1;
+    }
+}
+
+@mixin main-button($width, $bgColor) {
+    display: inline-block;
+    position: relative;
+    width: $width;
+    padding: .75em 1em;
+    // background-color: $bgColor;
+    // background-image: $bg-texture;
+    font-size: 1.25rem;
+    // font-weight: bold;
+    color: #fff;
+    vertical-align: middle;
+    border-radius: 4px;
+    overflow: hidden;
+
+    &::before {
+        @extend .ChangeButtonsBg::before;
+        background: $main-color $bg-texture fixed;
+        transform: translateX(0%);
+    }
+    &:hover::before {
+        transform: translateX(100%);
+    }
+    &::after {
+        @extend .ChangeButtonsBg::before;
+        background: lighten($main-color, 5) $bg-texture fixed;
+        transform: translateX(-100%);
+    }
+    &:hover::after {
+        transform: translateX(0);
+    }
+}
+
+@mixin sub-title($color, $margin) {
+    padding-bottom: 12px;
+    margin-bottom: $margin;
+    color: $color;
+    font-size: 1.15rem;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 2px solid $main-color;
+}
+
+//config --------------------------------------------
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 14px;
+}
+
+body {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 1rem;
+    font-smooth: smooth;
+    -webkit-font-smooth: smooth;
+    -ms-font-smooth: smooth;
+    color: $text;
+}
+
+img {
+    width: 100%;
+}
+
+p + p {
+    margin-top: 1em;
+    line-height: 1.5em;
+}
+
+.sec-w {
+    position: relative;
+    width: calc(100% - 280px);
+    // background: ;
+    height: 100vh;
+    margin-left: auto;
+}
+
+// header ---------------------------------------
+
+.hd {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: $header-size;
+    height: 100vh;
+    z-index: 1000;
+    // background-color: $main-color;
+    background: $bg-color $bg-texture fixed;
+    text-align: center;
+    font-size: 1.125rem;
+    color: #000;
+    transition: .4s;
+
+    &__title {
+        font-size: 1rem;
+        text-align: left;
+    }
+
+    &__logo {
+        width: 75%;
+        margin-top: 32px + 32px;
+    }
+
+    .nav {
+        margin-bottom: 14px + 32px + 32px;
+        &__list {
+            margin-bottom: 88px;
+            li {
+                margin-bottom: 1.5em;
+            }
+        }
+
+        &__contact-btn {
+            @include main-button(80%, $main-color);
+        }
+    }
+
+    &.change {
+        color: #fff;
+        background-color: $main-color;
+
+        .nav__contact-btn {
+            color: $text;
+            &::before {
+                background-color: #fff;
+            }
+            &::after {
+                background-color: darken(#fff, 4);
+            }
+        }
+    }
+}
+
+// main ------------------------------------------
+
+main {
+    width: 100%;
+}
+
+// hero ------------------------------------------
+
+.hero {
+    background: $bg-color $bg-texture fixed;
+
+    &__catch {
+        position: absolute;
+        right: 10%;
+        top: 10%;
+        letter-spacing: 4px;
+        font-size: 2rem;
+        font-weight: normal;
+        line-height: 1.5em;
+        writing-mode: vertical-rl;
+        -ms-writing-mode: tb-rl;
+
+        &--2 {
+            margin-top: 2em;
+        }
+    }
+
+    &__news {
+        display:flex;
+        position: absolute;
+        right: 0;
+        bottom: 5%;
+        color: #fff;
+    }
+
+    &__time {
+        position: relative;
+        display: inline-block;
+        padding: 16px 32px;
+        background: $main-color $bg-texture;
+        letter-spacing: 1px;
+        border-radius: 4px 0 0 4px;
+
+        // &::before {
+        //     content: '';
+        //     position: absolute;
+        //     left: -((14px + 16px + 16px) / 1.41 / 2);
+        //     top: 50%;
+        //     display: block;
+        //     width: (14px + 16px + 16px) / 1.41;
+        //     height: (14px + 16px + 16px) / 1.41;
+        //     transform:translateY(-50%) rotate(45deg);
+        //     background: $main-color $bg-texture;
+        // }
+
+        &::after {
+            content: '';
+            position: absolute;
+            right: -((14px + 16px + 16px) / 1.41 / 2);
+            top: 50%;
+            display: block;
+            width: (14px + 16px + 16px) / 1.41;
+            height: (14px + 16px + 16px) / 1.41;
+            transform:translateY(-50%) rotate(45deg);
+            background: $main-color $bg-texture;
+        }
+    }
+
+    &__news-desc {
+        display: inline-block;
+        padding: 16px 48px;
+        background: rgba(0, 0, 0, 0.7);
+
+        a {
+            text-decoration: underline;
+
+            &:hover {
+                text-decoration: none;
+            } 
+        }
+    }
+}
+
+// about -----------------------------------
+
+.about {
+    height: 130vh;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: visible;
+    background: $bg-color $bg-texture fixed;
+
+    &__bg {
+        &--top {
+            position: absolute;
+            left: -10px;
+            top: -20px;
+            width: 0%;
+            height: 400px;
+            transform: rotate(5deg);
+            overflow: hidden;
+
+            img {
+                height: 400px;
+                width: auto;
+                z-index: -1;
+            }
+        }
+
+        &--bottom {
+            position: absolute;
+            // right: -400px;
+            left: -200px;
+            top: 600px;
+            width: 0%;
+            height: 500px;
+            transform: rotate(-10deg);
+            overflow: hidden;
+            transform-origin: right;
+
+            img {
+                object-fit: contain;
+                height: 500px;
+                width: auto;
+                z-index: -1;
+            }
+        }
+    }
+
+    &__sub-title {
+        @include sub-title(currentColor, 32px)
+    }
+
+    &__desc {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 50;
+        padding: 80px;
+        background: #fff $bg-texture;
+        box-shadow: 2px 2px 10px -3px rgba(0,0,0,0.3);
+    }
+}
+
+// collection -----------------------------------
+
+.colle {
+    display: flex;
+
+    &__panel-area {
+        width: 50%;
+        padding: 64px;
+        background: $main-color $bg-texture fixed;
+    }
+
+    &__sub-title {
+        @include sub-title(#fff, 32px);
+        border-color: #fff;
+    }
+}

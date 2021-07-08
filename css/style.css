@@ -1,0 +1,312 @@
+@import url("https://cdn.jsdelivr.net/npm/destyle.css@2.0.2/destyle.css");
+@import url("https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&display=swap");
+.ChangeButtonsBg::before, .hd .nav__contact-btn::before, .hd .nav__contact-btn::after {
+  display: block;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  -webkit-transition: .2s;
+  transition: .2s;
+  z-index: -1;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 14px;
+}
+
+body {
+  font-family: 'Shippori Mincho', serif;
+  font-size: 1rem;
+  font-smooth: smooth;
+  -webkit-font-smooth: smooth;
+  -ms-font-smooth: smooth;
+  color: #5a494c;
+}
+
+img {
+  width: 100%;
+}
+
+p + p {
+  margin-top: 1em;
+  line-height: 1.5em;
+}
+
+.sec-w {
+  position: relative;
+  width: calc(100% - 280px);
+  height: 100vh;
+  margin-left: auto;
+}
+
+.hd {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 280px;
+  height: 100vh;
+  z-index: 1000;
+  background: #eee6de url("../images/bg_texture.png") fixed;
+  text-align: center;
+  font-size: 1.125rem;
+  color: #000;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.hd__title {
+  font-size: 1rem;
+  text-align: left;
+}
+
+.hd__logo {
+  width: 75%;
+  margin-top: 64px;
+}
+
+.hd .nav {
+  margin-bottom: 78px;
+}
+
+.hd .nav__list {
+  margin-bottom: 88px;
+}
+
+.hd .nav__list li {
+  margin-bottom: 1.5em;
+}
+
+.hd .nav__contact-btn {
+  display: inline-block;
+  position: relative;
+  width: 80%;
+  padding: .75em 1em;
+  font-size: 1.25rem;
+  color: #fff;
+  vertical-align: middle;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.hd .nav__contact-btn::before {
+  background: #9f2624 url("../images/bg_texture.png") fixed;
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+.hd .nav__contact-btn:hover::before {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+.hd .nav__contact-btn::after {
+  background: #b42b29 url("../images/bg_texture.png") fixed;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.hd .nav__contact-btn:hover::after {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.hd.change {
+  color: #fff;
+  background-color: #9f2624;
+}
+
+.hd.change .nav__contact-btn {
+  color: #5a494c;
+}
+
+.hd.change .nav__contact-btn::before {
+  background-color: #fff;
+}
+
+.hd.change .nav__contact-btn::after {
+  background-color: whitesmoke;
+}
+
+main {
+  width: 100%;
+}
+
+.hero {
+  background: #eee6de url("../images/bg_texture.png") fixed;
+}
+
+.hero__catch {
+  position: absolute;
+  right: 10%;
+  top: 10%;
+  letter-spacing: 4px;
+  font-size: 2rem;
+  font-weight: normal;
+  line-height: 1.5em;
+  -webkit-writing-mode: vertical-rl;
+          writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+}
+
+.hero__catch--2 {
+  margin-top: 2em;
+}
+
+.hero__news {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  right: 0;
+  bottom: 5%;
+  color: #fff;
+}
+
+.hero__time {
+  position: relative;
+  display: inline-block;
+  padding: 16px 32px;
+  background: #9f2624 url("../images/bg_texture.png");
+  letter-spacing: 1px;
+  border-radius: 4px 0 0 4px;
+}
+
+.hero__time::after {
+  content: '';
+  position: absolute;
+  right: -16.31206px;
+  top: 50%;
+  display: block;
+  width: 32.62411px;
+  height: 32.62411px;
+  -webkit-transform: translateY(-50%) rotate(45deg);
+          transform: translateY(-50%) rotate(45deg);
+  background: #9f2624 url("../images/bg_texture.png");
+}
+
+.hero__news-desc {
+  display: inline-block;
+  padding: 16px 48px;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.hero__news-desc a {
+  text-decoration: underline;
+}
+
+.hero__news-desc a:hover {
+  text-decoration: none;
+}
+
+.about {
+  height: 130vh;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: visible;
+  background: #eee6de url("../images/bg_texture.png") fixed;
+}
+
+.about__bg--top {
+  position: absolute;
+  left: -10px;
+  top: -20px;
+  width: 0%;
+  height: 400px;
+  -webkit-transform: rotate(5deg);
+          transform: rotate(5deg);
+  overflow: hidden;
+}
+
+.about__bg--top img {
+  height: 400px;
+  width: auto;
+  z-index: -1;
+}
+
+.about__bg--bottom {
+  position: absolute;
+  left: -200px;
+  top: 600px;
+  width: 0%;
+  height: 500px;
+  -webkit-transform: rotate(-10deg);
+          transform: rotate(-10deg);
+  overflow: hidden;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+}
+
+.about__bg--bottom img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: 500px;
+  width: auto;
+  z-index: -1;
+}
+
+.about__sub-title {
+  padding-bottom: 12px;
+  margin-bottom: 32px;
+  color: currentColor;
+  font-size: 1.15rem;
+  font-weight: bold;
+  text-align: center;
+  border-bottom: 2px solid #9f2624;
+}
+
+.about__desc {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 50;
+  padding: 80px;
+  background: #fff url("../images/bg_texture.png");
+  -webkit-box-shadow: 2px 2px 10px -3px rgba(0, 0, 0, 0.3);
+          box-shadow: 2px 2px 10px -3px rgba(0, 0, 0, 0.3);
+}
+
+.colle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.colle__panel-area {
+  width: 50%;
+  padding: 64px;
+  background: #9f2624 url("../images/bg_texture.png") fixed;
+}
+
+.colle__sub-title {
+  padding-bottom: 12px;
+  margin-bottom: 32px;
+  color: #fff;
+  font-size: 1.15rem;
+  font-weight: bold;
+  text-align: center;
+  border-bottom: 2px solid #9f2624;
+  border-color: #fff;
+}
+/*# sourceMappingURL=style.css.map */
