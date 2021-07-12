@@ -43,7 +43,7 @@ p + p {
 
 .sec-w {
   position: relative;
-  width: calc(100% - 280px);
+  width: calc(100% - 240px);
   height: 100vh;
   margin-left: auto;
 }
@@ -63,7 +63,7 @@ p + p {
   top: 0;
   left: 0;
   bottom: 0;
-  width: 280px;
+  width: 240px;
   height: 100vh;
   z-index: 1000;
   background: #eee6de url("../images/bg_texture.png") fixed;
@@ -155,10 +155,18 @@ main {
   background: #eee6de url("../images/bg_texture.png") fixed;
 }
 
+.hero__bg {
+  width: 100%;
+  height: 100%;
+  background: url("../images/bg_hero.png") no-repeat center;
+  background-size: auto 90%;
+  background-position: calc(50% - 140px) center;
+}
+
 .hero__catch {
   position: absolute;
   right: 10%;
-  top: 10%;
+  top: 8%;
   letter-spacing: 4px;
   font-size: 2rem;
   font-weight: normal;
@@ -219,10 +227,9 @@ main {
 }
 
 .about {
-  height: 130vh;
+  height: 100vh;
   position: relative;
-  overflow-x: hidden;
-  overflow-y: visible;
+  overflow: hidden;
   background: #eee6de url("../images/bg_texture.png") fixed;
 }
 
@@ -248,7 +255,7 @@ main {
   left: -200px;
   top: 600px;
   width: 0%;
-  height: 500px;
+  height: 350px;
   -webkit-transform: rotate(-10deg);
           transform: rotate(-10deg);
   overflow: hidden;
@@ -259,7 +266,7 @@ main {
 .about__bg--bottom img {
   -o-object-fit: contain;
      object-fit: contain;
-  height: 500px;
+  height: 350px;
   width: auto;
   z-index: -1;
 }

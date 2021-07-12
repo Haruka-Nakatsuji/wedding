@@ -7,7 +7,7 @@ $bg-color: #eee6de;
 $main-color: #9f2624;
 $bg-texture: url('../images/bg_texture.png');
 $btn-color: #D9AB42;
-$header-size: 280px;
+$header-size: 240px;
 $text: #5a494c;
 
 .ChangeButtonsBg {
@@ -97,7 +97,7 @@ p + p {
 
 .sec-w {
     position: relative;
-    width: calc(100% - 280px);
+    width: calc(100% - 240px);
     // background: ;
     height: 100vh;
     margin-left: auto;
@@ -174,10 +174,18 @@ main {
 .hero {
     background: $bg-color $bg-texture fixed;
 
+    &__bg {
+        width: 100%;
+        height: 100%;
+        background: url("../images/bg_hero.png") no-repeat center;
+        background-size: auto 90%;
+        background-position: calc(50% - 140px) center;
+    }
+
     &__catch {
         position: absolute;
         right: 10%;
-        top: 10%;
+        top: 8%;
         letter-spacing: 4px;
         font-size: 2rem;
         font-weight: normal;
@@ -249,10 +257,9 @@ main {
 // about -----------------------------------
 
 .about {
-    height: 130vh;
+    height: 100vh;
     position: relative;
-    overflow-x: hidden;
-    overflow-y: visible;
+    overflow: hidden;
     background: $bg-color $bg-texture fixed;
 
     &__bg {
@@ -278,14 +285,14 @@ main {
             left: -200px;
             top: 600px;
             width: 0%;
-            height: 500px;
+            height: 350px;
             transform: rotate(-10deg);
             overflow: hidden;
             transform-origin: right;
 
             img {
                 object-fit: contain;
-                height: 500px;
+                height: 350px;
                 width: auto;
                 z-index: -1;
             }
