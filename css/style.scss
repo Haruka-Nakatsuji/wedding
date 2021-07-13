@@ -66,6 +66,15 @@ $text: #5a494c;
     border-bottom: 2px solid $main-color;
 }
 
+@keyframes moveMenuLine {
+    0% {
+        transform: translateX(100%);
+    }
+    99% {
+        transform: translateX(-100%);
+    }
+}
+
 //config --------------------------------------------
 
 * {
@@ -137,8 +146,32 @@ p + p {
         margin-bottom: 14px + 32px + 32px;
         &__list {
             margin-bottom: 88px;
+
             li {
                 margin-bottom: 1.5em;
+
+                a {
+                    display: inline-block;
+                    position: relative;
+                    overflow: hidden;
+
+                    &::before {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        top: 0;
+                        bottom: 0px;
+                        left: 0;
+                        right: 0;
+                        border-bottom: 1px solid $text;
+                        transition: all .2s;
+                        animation: moveMenuLine .2s;
+                    }
+
+                    &:hover::before {
+                        transform: translateX(0);
+                    }
+                }
             }
         }
 
@@ -257,7 +290,6 @@ main {
 // about -----------------------------------
 
 .about {
-    height: 100vh;
     position: relative;
     overflow: hidden;
     background: $bg-color $bg-texture fixed;
@@ -266,7 +298,7 @@ main {
         &--top {
             position: absolute;
             left: -10px;
-            top: -20px;
+            top: 0px;
             width: 0%;
             height: 400px;
             transform: rotate(5deg);
@@ -318,16 +350,59 @@ main {
 // collection -----------------------------------
 
 .colle {
-    display: flex;
+    padding: 240px 0;
+    height: auto;
+    background: $bg-color $bg-texture fixed;
 
     &__panel-area {
-        width: 50%;
-        padding: 64px;
-        background: $main-color $bg-texture fixed;
+        width: 80%;
+        margin: 0 auto;
     }
 
     &__sub-title {
-        @include sub-title(#fff, 32px);
-        border-color: #fff;
+        @include sub-title($text, 32px);
+        width: 60%;
+        margin: 0 auto;
+        margin-bottom: 48px;
+    }
+
+    &__panels {
+        display: grid;
+        grid-template:
+            "a p m"
+            "a s s"
+        ;
+        gap: 32px;
+        width: 100%;
+        height: 600px;
+
+        li {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            border-radius: 32px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: 50% 35%;
+            }
+        }
+    }
+
+    &__panel {
+        &--a {
+            grid-area: a;
+        }
+        &--p {
+            grid-area: p;
+        }
+        &--m {
+            grid-area: m;
+        }
+        &--s {
+            grid-area: s;
+        }
     }
 }

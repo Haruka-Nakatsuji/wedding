@@ -21,7 +21,7 @@ const lace = gsap.timeline({
 jpStyle.to('.about__bg--top', {
     duration: 1.5,
     width: '150%',
-    y: 162,
+    y: 182,
     x: -14
 })
 
