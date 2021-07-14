@@ -8,30 +8,50 @@
   left: 0;
   bottom: 0;
   right: 0;
-  -webkit-transition: .2s;
-  transition: .2s;
   z-index: -1;
 }
 
 @-webkit-keyframes moveMenuLine {
   0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
     -webkit-transform: translateX(100%);
             transform: translateX(100%);
-  }
-  99% {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
   }
 }
 
 @keyframes moveMenuLine {
   0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
     -webkit-transform: translateX(100%);
             transform: translateX(100%);
   }
-  99% {
+}
+
+@-webkit-keyframes moveMenuLineHover {
+  0% {
     -webkit-transform: translateX(-100%);
             transform: translateX(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes moveMenuLineHover {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
 
@@ -92,8 +112,8 @@ p + p {
   text-align: center;
   font-size: 1.125rem;
   color: #000;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: all .4s;
+  transition: all .4s;
 }
 
 .hd__title {
@@ -115,13 +135,15 @@ p + p {
 }
 
 .hd .nav__list li {
-  margin-bottom: 1.5em;
+  margin-bottom: calc(1.5em - 6px);
+  line-height: 1em;
 }
 
 .hd .nav__list li a {
   display: inline-block;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
+  padding-bottom: 6px;
 }
 
 .hd .nav__list li a::before {
@@ -132,16 +154,15 @@ p + p {
   bottom: 0px;
   left: 0;
   right: 0;
-  border-bottom: 1px solid #5a494c;
-  -webkit-transition: all .2s;
-  transition: all .2s;
-  -webkit-animation: moveMenuLine .2s;
-          animation: moveMenuLine .2s;
+  border-bottom: 1px solid currentColor;
+  -webkit-animation: moveMenuLine .4s forwards;
+          animation: moveMenuLine .4s forwards;
+  z-index: -1;
 }
 
 .hd .nav__list li a:hover::before {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
+  -webkit-animation: moveMenuLineHover .4s forwards;
+          animation: moveMenuLineHover .4s forwards;
 }
 
 .hd .nav__contact-btn {
@@ -160,6 +181,8 @@ p + p {
   background: #9f2624 url("../images/bg_texture.png") fixed;
   -webkit-transform: translateX(0%);
           transform: translateX(0%);
+  -webkit-transition: all .4s;
+  transition: all .4s;
 }
 
 .hd .nav__contact-btn:hover::before {
@@ -171,6 +194,8 @@ p + p {
   background: #b42b29 url("../images/bg_texture.png") fixed;
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
+  -webkit-transition: all .4s;
+  transition: all .4s;
 }
 
 .hd .nav__contact-btn:hover::after {

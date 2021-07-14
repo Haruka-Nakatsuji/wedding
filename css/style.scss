@@ -19,7 +19,6 @@ $text: #5a494c;
         left:0;
         bottom:0;
         right:0;
-        transition: .2s;
         z-index: -1;
     }
 }
@@ -42,6 +41,7 @@ $text: #5a494c;
         @extend .ChangeButtonsBg::before;
         background: $main-color $bg-texture fixed;
         transform: translateX(0%);
+        transition: all .4s;
     }
     &:hover::before {
         transform: translateX(100%);
@@ -50,6 +50,8 @@ $text: #5a494c;
         @extend .ChangeButtonsBg::before;
         background: lighten($main-color, 5) $bg-texture fixed;
         transform: translateX(-100%);
+        transition: all .4s;
+
     }
     &:hover::after {
         transform: translateX(0);
@@ -68,10 +70,19 @@ $text: #5a494c;
 
 @keyframes moveMenuLine {
     0% {
+        transform: translateX(0);
+    }
+    100% {
         transform: translateX(100%);
     }
-    99% {
+}
+
+@keyframes moveMenuLineHover {
+    0% {
         transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
     }
 }
 
@@ -130,7 +141,7 @@ p + p {
     text-align: center;
     font-size: 1.125rem;
     color: #000;
-    transition: .4s;
+    transition: all .4s;
 
     &__title {
         font-size: 1rem;
@@ -148,12 +159,14 @@ p + p {
             margin-bottom: 88px;
 
             li {
-                margin-bottom: 1.5em;
+                margin-bottom: calc(1.5em - 6px);
+                line-height: 1em;
 
                 a {
                     display: inline-block;
                     position: relative;
-                    overflow: hidden;
+                    overflow-x: hidden;
+                    padding-bottom: 6px;
 
                     &::before {
                         content: "";
@@ -163,13 +176,14 @@ p + p {
                         bottom: 0px;
                         left: 0;
                         right: 0;
-                        border-bottom: 1px solid $text;
-                        transition: all .2s;
-                        animation: moveMenuLine .2s;
+                        border-bottom: 1px solid currentColor;
+                        // background-color: cyan;
+                        animation: moveMenuLine .4s forwards;
+                        z-index: -1;
                     }
 
                     &:hover::before {
-                        transform: translateX(0);
+                        animation: moveMenuLineHover .4s forwards;
                     }
                 }
             }
