@@ -62,7 +62,7 @@ $text: #5a494c;
     padding-bottom: 12px;
     margin-bottom: $margin;
     color: $color;
-    font-size: 1.15rem;
+    font-size: 1.25rem;
     font-weight: bold;
     text-align: center;
     border-bottom: 2px solid $main-color;
@@ -83,6 +83,18 @@ $text: #5a494c;
     }
     100% {
         transform: translateX(0);
+    }
+}
+
+@keyframes changeLocaBg {
+    from {
+        background-color: #fff;
+    }
+}
+
+@keyframes changeLocaBg2 {
+    to {
+        background-color: transparent;
     }
 }
 
@@ -307,6 +319,7 @@ main {
     position: relative;
     overflow: hidden;
     background: $bg-color $bg-texture fixed;
+    padding-top: 88px;
 
     &__bg {
         &--top {
@@ -329,7 +342,7 @@ main {
             position: absolute;
             // right: -400px;
             left: -200px;
-            top: 600px;
+            bottom: 20px;
             width: 0%;
             height: 350px;
             transform: rotate(-10deg);
@@ -364,8 +377,9 @@ main {
 // collection -----------------------------------
 
 .colle {
-    padding: 240px 0;
-    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: $bg-color $bg-texture fixed;
 
     &__panel-area {
@@ -374,10 +388,10 @@ main {
     }
 
     &__sub-title {
-        @include sub-title($text, 32px);
-        width: 60%;
-        margin: 0 auto;
-        margin-bottom: 48px;
+        @include sub-title($text, 64px);
+        width: 30%;
+        padding-right: 2em;
+        text-align: right;
     }
 
     &__panels {
@@ -389,12 +403,15 @@ main {
         gap: 32px;
         width: 100%;
         height: 600px;
+        transform: translateY(20px);
 
         li {
+            position: relative;
             width: 100%;
             height: 100%;
             overflow: hidden;
             border-radius: 32px;
+            box-shadow: 2px 2px 8px rgba(0,0,0,0.02);
 
             img {
                 width: 100%;
@@ -408,15 +425,223 @@ main {
     &__panel {
         &--a {
             grid-area: a;
+            opacity: 0;
         }
         &--p {
             grid-area: p;
+            opacity: 0;
         }
         &--m {
             grid-area: m;
+            opacity: 0;
         }
         &--s {
             grid-area: s;
+            opacity: 0;
         }
+    }
+
+    &__panel-text {
+        position: absolute;
+        bottom: 0;
+        left:0;
+        right:0;
+        padding: 48px 24px 12px;
+        background: linear-gradient(to top, rgba(255,255,255,0.8) 60%, transparent 100%);
+        text-shadow: 0 0 4px #fff;
+    }
+
+    &__dress-name {
+        color: #0c0c0c;
+        margin-bottom: .4em;
+        font-size: 1.35rem;
+    }
+
+    &__btn {
+        @include main-button(240px, $main-color);
+        display: block;
+        height: 46.25px;
+        text-align: center;
+        margin-left: auto;
+        margin-top: 48px;
+
+        &::before {
+            z-index: 1;
+        }
+        &::after {
+            z-index: 1;
+        }
+
+        a {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: .75em 1em;
+            z-index: 2;
+        }
+    }
+}
+
+// ご利用場面 ------------------------------------
+
+.loca {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: $bg-color $bg-texture fixed;
+
+    &--inner {
+        width: 100%;
+    } 
+
+    &__sub-title {
+        @include sub-title(currentColor, 64px);
+        width: 30%;
+        padding-right: 2em;
+        text-align: right;
+    }
+
+    &__bg {
+        position: relative;
+        width: 80%;
+        height: 70vh;
+        margin: 0 auto;
+        border-radius: 64px;
+        background: center no-repeat;
+        background-size: cover;
+    }
+
+    &__secret-bg {
+        position: absolute;
+        top:0;
+        left: 0;
+        bottom:0;
+        right:0;
+        border-radius: 64px;
+    }
+
+    &__text {
+        position: absolute;
+        right: -3%;
+        bottom: 150px;
+        padding: .5em 1em;
+        font-size: 1.5rem;
+        background: #fff $bg-texture;
+        z-index: 5;
+    }
+
+    &__review {
+        position: absolute;
+        top: 10%;
+        right: 10%;
+        width: 30%;
+        padding: 32px;
+        background: rgba(255,255,255,0.6);
+    }
+
+    &__review-title {
+        margin-bottom: 1em;
+        font-size: 1.25rem;
+        font-weight: bold;
+        color: #0c0c0c
+    }
+
+    &__review-text {
+        font-weight: bold;
+        line-height: 1.5;
+        margin-bottom: 16px;
+    }
+
+    &__review-name {
+        font-size: .9rem;
+    }
+}
+
+//事例紹介 ----------------------------------
+
+.proc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $bg-color $bg-texture fixed;
+
+    &--inner {
+        width: 100%;
+    }
+
+    &__sub-title {
+        @include sub-title(currentColor, 64px);
+        width: 30%;
+        padding-right: 2em;
+        text-align: right;
+    }
+
+    &__process {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 75%;
+        max-width: 1100px;
+        margin: 0 auto;
+
+        li {
+            position: relative;
+            width: calc(100% / 4);
+            padding: 16px;
+            text-align: center;
+
+            img {
+                width: 95%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+                border-radius: 50%;
+            }
+
+            &.--mar {
+                padding-top: 40px;
+            }
+        }
+
+        li:not(.--noarrow) {
+            &::after {
+                display: block;
+                content: "";
+                background: url('../images/right-arrow.png') no-repeat;
+                background-size: contain;
+                width: 24px;
+                height: 24px;
+                position: absolute;
+                top: 50%;
+                right: -12px;
+                transform: translateY(50%);
+            }
+        }
+    }
+
+    &__num {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    &__name {
+        font-size: 1.35rem;
+        margin: 8px 0 24px
+    }
+
+    &__img {
+        width: 90%;
+        height: auto;
+        margin: 0 auto;
+        border-radius: 50%;
+    }
+
+    &__detail {
+        margin-top: 24px;
+        text-align: left;
+        line-height: 1.5;
     }
 }

@@ -9,20 +9,22 @@
     <title>ウェディングサイト</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/ScrollTrigger.min.js"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/ScrollTrigger.min.js"></script> 
+    <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
 <header class="hd">
     <div class="hd__top">
         <h1 class="hd__title">ウェディングサイト</h1>
-        <img class="hd__logo" src="./images/sampleimg.jpeg" alt="">
+        <a href="#"><img class="hd__logo" src="./images/sampleimg.jpeg" alt=""></a>
     </div>
     <nav class="nav">
         <ul class="nav__list">
             <li><a href="#about">お店について</a></li>
             <li><a href="#colle">製作例</a></li>
-            <li><a href="">場面</a></li>
-            <li><a href="">ご利用の流れ</a></li>
+            <li><a href="#loca">事例紹介</a></li>
+            <li><a href="#proc">ご利用の流れ</a></li>
+            <li><a href="#service">サービス内容・価格</a></li>
             <li><a href="">よくあるご質問</a></li>
         </ul>
         <button class="nav__contact-btn">お問い合わせ</button>
@@ -40,6 +42,7 @@
         <span class="hero__news-desc"><a href=".">コロナかのドレスのお取扱いについて</a></span>
     </div> -->
 </section>
+<div style="height: 88px; background:  url('../images/bg_texture.png') #eee6de fixed;"></div>
 <section class="sec-w about" id="about">
     <div class="about__desc">
         <h2 class="about__sub-title">お店について</h2>
@@ -59,16 +62,121 @@
     </div>
 </section>
 <section class="sec-w colle" id="colle">
-    <h2 class="colle__sub-title">ドレス・コレクション（製作例）</h2>
-    <div class="colle__panel-area">
-        <ol class="colle__panels">
-            <li class="colle__panel--a"><img src="./images/s_1.jpeg" alt=""></li>
-            <li class="colle__panel--p"><img src="./images/s_2.jpeg" alt=""></li>
-            <li class="colle__panel--m"><img src="./images/s-3.jpeg" alt=""></li>
-            <li class="colle__panel--s"><img src="./images/s-4.jpeg" alt=""></li>
+    <div class="colle--inner">
+        <h2 class="colle__sub-title">ドレス・コレクション（製作例）</h2>
+        <div class="colle__panel-area">
+            <ol class="colle__panels">
+                <li class="colle__panel--a">
+                    <a href=".">
+                        <img src="./images/s_1.jpeg" alt="">
+                        <div class="colle__panel-text">
+                            <h3 class="colle__dress-name">主役/華</h3>
+                            <p>Aラインシルエット + 和柄19</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="colle__panel--p">
+                    <a href=".">
+                        <img src="./images/s_2.jpeg" alt="">
+                        <div class="colle__panel-text">
+                            <h3 class="colle__dress-name">SAN-SHI-SUI-MEI</h3>
+                            <p>プリンセスシルエット + 和柄33</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="colle__panel--m">
+                    <a href=".">
+                        <img src="./images/s-3.jpeg" alt="">
+                        <div class="colle__panel-text">
+                            <h3 class="colle__dress-name">グラデーションドレス</h3>
+                            <p>半着物シルエット + 白無垢5</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="colle__panel--s">
+                    <a href=".">
+                        <img src="./images/s-4.jpeg" alt="">
+                        <div class="colle__panel-text">
+                            <h3 class="colle__dress-name">SHIROMUKU</h3>
+                            <p>半着物シルエット + 白無垢2 + オプション帯（レース）</p>
+                        </div>
+                    </a>
+                </li>
+            </ol>
+            <button class="colle__btn"><a href="#proc">製作の流れを見る →</a></button>
+        </div>
+    </div>
+</section>
+<section class="sec-w loca" id="loca">
+    <div class="loca--inner">
+        <h2 class="loca__sub-title">事例紹介</h2>
+        <div class="loca__bg">
+            <span class="loca__text">喜びの声を沢山いただいております</span>
+            <div class="loca__review">
+                <h3 class="loca__review-title">世界で1冊の宝物ができました</h3>
+                <div class="loca__review-text">
+                    イメージ以上の仕上がりで、実際に具現化する事でその価値が高くなり宝物になりました。
+                </div>
+                <span class="loca__review-name">藤浪様</span>
+            </div>
+            <div class="loca__secret-bg"></div>
+        </div>
+    </div>
+</section>
+<section class="sec-w proc" id="proc">
+    <div class="proc--inner">
+        <h2 class="proc__sub-title">ご利用の流れ</h2>
+        <ol class="proc__process">
+            <li>
+                <span class="proc__num">01</span><br>
+                <h3 class="proc__name">お申し込み</h3>
+                <div class="proc__img"><img src="./images/sampleimg.jpeg" alt=""></div>
+                <p class="proc__detail">HPからお申し込みください。</p>
+            </li>
+            <li>
+                <span class="proc__num">02</span><br>
+                <h3 class="proc__name">型・柄決め</h3>
+                <div class="proc__img"><img src="./images/sampleimg.jpeg" alt=""></div>
+                <p class="proc__detail">店へお越しいただき、ドレスのシルエットと柄を沢山の種類の中から選んでいただきます。</p>
+            </li>
+            <li>
+                <span class="proc__num">03</span><br>
+                <h3 class="proc__name">オプション追加</h3>
+                <div class="proc__img"><img src="./images/sampleimg.jpeg" alt=""></div>
+                <p class="proc__detail">ご要望に合わせて、ドレス本体にレースなどのオプションを追加することができます。（追加料金が必要です）</p>
+            </li>
+            <li class="--noarrow">
+                <span class="proc__num">04</span><br>
+                <h3 class="proc__name">小物選び</h3>
+                <div class="proc__img"><img src="./images/sampleimg.jpeg" alt=""></div>
+                <p class="proc__detail">ドレスにあった帽子やリボン、手袋などを選ぶことができます。オーダーメイド可能です。</p>
+            </li>
+            <li class="--mar">
+                <span class="proc__num">05</span><br>
+                <h3 class="proc__name">サイズ決め</h3>
+                <div class="proc__img"><img src="./images/sampleimg.jpeg" alt=""></div>
+                <p class="proc__detail">お客様のお身体のサイズを測らせていただき、それを基準にサイズの決定をいたします。</p>
+            </li>
+            <li class="--mar">
+                <span class="proc__num">06</span><br>
+                <h3 class="proc__name">価格確認・支払い</h3>
+                <div class="proc__img"><img src="./images/sampleimg.jpeg" alt=""></div>
+                <p class="proc__detail">店内にてドレスや小物の合計価格を確認後、後日お支払いいただきます。</p>
+            </li>
+            <li class="--mar">
+                <span class="proc__num">07</span><br>
+                <h3 class="proc__name">製作</h3>
+                <div class="proc__img"><img src="./images/sampleimg.jpeg" alt=""></div>
+                <p class="proc__detail">ドレスを制作します。</p>
+            </li>
+            <li class="--noarrow --mar">
+                <span class="proc__num">08</span><br>
+                <h3 class="proc__name">納品</h3>
+                <div class="proc__img"><img src="./images/sampleimg.jpeg" alt=""></div>
+                <p class="proc__detail">挙式1週間前に最終フィッティングを致しました後、ご指定の日時、場所へ発送いたします。</p>
+            </li>
         </ol>
     </div>
-    <!-- <div class="colle__pict-area"></div> -->
 </section>
 </main>
 <footer class="footer"></footer>
