@@ -88,7 +88,7 @@ $text: #5a494c;
 
 @keyframes changeLocaBg {
     from {
-        background-color: #fff;
+        background-color: #eee6de;
     }
 }
 
@@ -116,6 +116,7 @@ body {
     -webkit-font-smooth: smooth;
     -ms-font-smooth: smooth;
     color: $text;
+    background: $bg-color $bg-texture fixed;
 }
 
 img {
@@ -149,7 +150,6 @@ p + p {
     height: 100vh;
     z-index: 1000;
     // background-color: $main-color;
-    background: $bg-color $bg-texture fixed;
     text-align: center;
     font-size: 1.125rem;
     color: #000;
@@ -231,8 +231,6 @@ main {
 // hero ------------------------------------------
 
 .hero {
-    background: $bg-color $bg-texture fixed;
-
     &__bg {
         width: 100%;
         height: 100%;
@@ -318,7 +316,6 @@ main {
 .about {
     position: relative;
     overflow: hidden;
-    background: $bg-color $bg-texture fixed;
     padding-top: 88px;
 
     &__bg {
@@ -380,7 +377,6 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: $bg-color $bg-texture fixed;
 
     &__panel-area {
         width: 80%;
@@ -455,6 +451,10 @@ main {
         color: #0c0c0c;
         margin-bottom: .4em;
         font-size: 1.35rem;
+
+        &::first-letter {
+            color: $btn-color;
+        }
     }
 
     &__btn {
@@ -491,7 +491,6 @@ main {
     justify-content: center;
     align-items: center;
     position: relative;
-    background: $bg-color $bg-texture fixed;
 
     &--inner {
         width: 100%;
@@ -540,23 +539,27 @@ main {
         width: 30%;
         padding: 32px;
         background: rgba(255,255,255,0.6);
+        backdrop-filter: blur(5px);
     }
 
     &__review-title {
         margin-bottom: 1em;
         font-size: 1.25rem;
         font-weight: bold;
-        color: #0c0c0c
+        color: darken($text, 13);
     }
 
     &__review-text {
-        font-weight: bold;
+        // font-weight: bold;
         line-height: 1.5;
         margin-bottom: 16px;
+        font-family: sans-serif;
     }
 
     &__review-name {
-        font-size: .9rem;
+        display: block;
+        text-align: right;
+        font-size: .95rem;
     }
 }
 
@@ -566,14 +569,13 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: $bg-color $bg-texture fixed;
 
     &--inner {
         width: 100%;
     }
 
     &__sub-title {
-        @include sub-title(currentColor, 64px);
+        @include sub-title(currentColor, 48px);
         width: 30%;
         padding-right: 2em;
         text-align: right;
@@ -584,13 +586,13 @@ main {
         justify-content: center;
         flex-wrap: wrap;
         width: 75%;
-        max-width: 1100px;
+        max-width: 900px;
         margin: 0 auto;
 
         li {
             position: relative;
             width: calc(100% / 4);
-            padding: 16px;
+            padding: 0 16px;
             text-align: center;
 
             img {
@@ -602,7 +604,7 @@ main {
             }
 
             &.--mar {
-                padding-top: 40px;
+                padding-top: 32px;
             }
         }
 
@@ -623,8 +625,13 @@ main {
     }
 
     &__num {
+        display: block;
         font-size: 2rem;
         font-weight: bold;
+    }
+
+    &__num::first-letter {
+        color: $btn-color;
     }
 
     &__name {
@@ -643,5 +650,132 @@ main {
         margin-top: 24px;
         text-align: left;
         line-height: 1.5;
+    }
+}
+
+// サービス -----------------------------------
+
+.service {
+    height: auto;
+    padding: 64px 0;
+    background: #fff;
+    margin-top: 96px;
+
+    &__sub-title {
+        @include sub-title(currentColor, 48px);
+        width: 30%;
+        padding-right: 2em;
+        text-align: right;
+    }
+
+    table {
+        margin: auto;
+    }
+
+    td, th {
+        padding: 1em;
+    }
+
+    th {
+        position: relative;
+        padding-right: calc(48px + 1em);
+        color: #7f7f7f;
+        font-weight: normal;
+        text-align: right;
+
+        &:after{
+            display: block;
+            content: "";
+            width: 48px;
+            height: 2px;
+            background-color: $btn-color;
+            position: absolute;
+            top: calc(1em + 0.5em - 1px);
+            right:0px;
+        }
+    }
+
+    td {
+        li + li {
+            margin-top: 7px;
+        }
+    }
+}
+
+.faq {
+    height: auto;
+    padding: 96px 0;
+
+    &__sub-title {
+        @include sub-title(currentColor, 48px);
+        width: 30%;
+        padding-right: 2em;
+        text-align: right;
+    }
+
+    &__accordion {
+        width: 80%;
+        margin: auto;
+    }
+
+    &__accordion-item {
+        border-top: 1px solid lighten($text, 30);
+    }
+
+    &__accordion-item:last-of-type {
+        border-bottom: 1px solid lighten($text, 30);
+    }
+
+    .js-accordion-trigger {
+        position: relative;
+
+        &::after {
+            content: url('../images/plus.svg');
+            display: block;
+            position: absolute;
+            right: 1em;
+            top: calc(1.25rem / 2 + 1.25rem * 2 - 16px);
+            width: 32px;
+            height: 32px;
+            transition: .3s;
+        }
+
+        &.is-active {
+            &::after {
+                transform: rotate(135deg);
+            }
+        }
+    }
+
+    &__accordion-title {
+        padding: 2em 1.5em;
+        font-size: 1.25rem;
+        font-weight: normal;
+        cursor: pointer;
+
+        &::before {
+            display: inline-block;
+            content: 'Q.';
+            margin-right: 10px;
+            color: $btn-color;
+        }
+    }
+
+    &__accordion-content {
+        display: none;
+        cursor: pointer;
+        padding: 1em 1.75em;
+        line-height: 1.5;
+
+        &.is-open {
+            display: block;
+        }
+
+        &::before {
+            display: inline-block;
+            content: 'A.';
+            margin-right: 10px;
+            color: $btn-color;
+        }
     }
 }
