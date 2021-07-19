@@ -1,6 +1,6 @@
 @import url("https://cdn.jsdelivr.net/npm/destyle.css@2.0.2/destyle.css");
 @import url("https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&display=swap");
-.ChangeButtonsBg::before, .hd .nav__contact-btn::before, .hd .nav__contact-btn::after, .colle__btn::before, .colle__btn::after {
+.ChangeButtonsBg::before, .hd .nav__contact-btn::before, .hd .nav__contact-btn::after, .colle__btn::before, .colle__btn::after, .contact__btn::before, .contact__btn::after {
   display: block;
   content: '';
   position: absolute;
@@ -76,6 +76,58 @@
 @keyframes changeLocaBg2 {
   to {
     background-color: transparent;
+  }
+}
+
+@-webkit-keyframes timeBar {
+  from {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes timeBar {
+  from {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes changeArrowsColor {
+  0% {
+    color: #9f2624;
+  }
+  16.7% {
+    color: #fff;
+  }
+  33.333333% {
+    color: #9f2624;
+  }
+  100% {
+    color: #9f2624;
+  }
+}
+
+@keyframes changeArrowsColor {
+  0% {
+    color: #9f2624;
+  }
+  16.7% {
+    color: #fff;
+  }
+  33.333333% {
+    color: #9f2624;
+  }
+  100% {
+    color: #9f2624;
   }
 }
 
@@ -193,12 +245,16 @@ p + p {
   display: inline-block;
   position: relative;
   width: 80%;
-  padding: .75em 1em;
   font-size: 1.25rem;
   color: #fff;
   vertical-align: middle;
   border-radius: 4px;
   overflow: hidden;
+}
+
+.hd .nav__contact-btn a {
+  display: block;
+  padding: .75em 1em;
 }
 
 .hd .nav__contact-btn::before {
@@ -229,7 +285,7 @@ p + p {
 
 .hd.change {
   color: #fff;
-  background-color: #9f2624;
+  background: #9f2624 url("../images/bg_texture.png") fixed;
 }
 
 .hd.change .nav__contact-btn {
@@ -491,7 +547,6 @@ main {
   display: inline-block;
   position: relative;
   width: 240px;
-  padding: .75em 1em;
   font-size: 1.25rem;
   color: #fff;
   vertical-align: middle;
@@ -502,6 +557,11 @@ main {
   text-align: center;
   margin-left: auto;
   margin-top: 48px;
+}
+
+.colle__btn a {
+  display: block;
+  padding: .75em 1em;
 }
 
 .colle__btn::before {
@@ -619,10 +679,13 @@ main {
 }
 
 .loca__review-title {
+  display: inline-block;
+  padding-bottom: 4px;
   margin-bottom: 1em;
   font-size: 1.25rem;
   font-weight: bold;
   color: #352b2d;
+  border-bottom: 2px solid #D9AB42;
 }
 
 .loca__review-text {
@@ -635,6 +698,28 @@ main {
   display: block;
   text-align: right;
   font-size: .95rem;
+}
+
+.loca__review-bar {
+  position: absolute;
+  bottom: 0;
+  left: 64px;
+  right: 64px;
+  height: 4px;
+  overflow: hidden;
+}
+
+.loca__review-bar::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #D9AB42;
+  -webkit-animation: timeBar 30s infinite linear;
+          animation: timeBar 30s infinite linear;
 }
 
 .proc {
@@ -676,7 +761,7 @@ main {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 75%;
-  max-width: 900px;
+  max-width: 980px;
   margin: 0 auto;
 }
 
@@ -745,7 +830,7 @@ main {
 
 .service {
   height: auto;
-  padding: 64px 0;
+  padding: 114px 0;
   background: #fff;
   margin-top: 96px;
 }
@@ -796,7 +881,7 @@ main {
 
 .faq {
   height: auto;
-  padding: 96px 0;
+  padding: 130px 0;
 }
 
 .faq__sub-title {
@@ -876,5 +961,126 @@ main {
   content: 'A.';
   margin-right: 10px;
   color: #D9AB42;
+}
+
+.faq__accordion-content a {
+  text-decoration: underline;
+}
+
+.faq__accordion-content a:hover {
+  text-decoration: none;
+}
+
+.go-contact {
+  padding-bottom: 72px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.go-contact div {
+  display: inline-block;
+  margin-top: 56px;
+  color: #9f2624;
+  font-weight: bold;
+  -webkit-transform: rotate(-90deg) scaleY(1.5);
+          transform: rotate(-90deg) scaleY(1.5);
+}
+
+.go-contact div span:first-child {
+  -webkit-animation: changeArrowsColor 7.5s infinite;
+          animation: changeArrowsColor 7.5s infinite;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+}
+
+.go-contact div span:nth-child(2) {
+  -webkit-animation: changeArrowsColor 7.5s infinite;
+          animation: changeArrowsColor 7.5s infinite;
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+}
+
+.go-contact div span:last-child {
+  -webkit-animation: changeArrowsColor 7.5s infinite;
+          animation: changeArrowsColor 7.5s infinite;
+}
+
+.contact {
+  height: auto;
+  padding: 114px 4% calc(114px + (114px - 48px));
+  text-align: center;
+}
+
+.contact__btn {
+  display: inline-block;
+  position: relative;
+  width: 50%;
+  font-size: 1.25rem;
+  color: #fff;
+  vertical-align: middle;
+  border-radius: 4px;
+  overflow: hidden;
+  font-size: 1.75em;
+  -webkit-box-shadow: 0 0 16px -8px black;
+          box-shadow: 0 0 16px -8px black;
+}
+
+.contact__btn a {
+  display: block;
+  padding: .75em 1em;
+}
+
+.contact__btn::before {
+  background: #9f2624 url("../images/bg_texture.png") fixed;
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+
+.contact__btn:hover::before {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+.contact__btn::after {
+  background: #b42b29 url("../images/bg_texture.png") fixed;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+
+.contact__btn:hover::after {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.contact__btn a {
+  padding: 1em 2em;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: auto;
+  padding: 48px;
+}
+
+.footer a {
+  margin-right: 1.5em;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.footer a:hover {
+  opacity: 0.6;
 }
 /*# sourceMappingURL=style.css.map */

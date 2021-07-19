@@ -27,7 +27,6 @@ $text: #5a494c;
     display: inline-block;
     position: relative;
     width: $width;
-    padding: .75em 1em;
     // background-color: $bgColor;
     // background-image: $bg-texture;
     font-size: 1.25rem;
@@ -36,6 +35,11 @@ $text: #5a494c;
     vertical-align: middle;
     border-radius: 4px;
     overflow: hidden;
+
+    a {
+        display: block;
+        padding: .75em 1em;
+    }
 
     &::before {
         @extend .ChangeButtonsBg::before;
@@ -95,6 +99,30 @@ $text: #5a494c;
 @keyframes changeLocaBg2 {
     to {
         background-color: transparent;
+    }
+}
+
+@keyframes timeBar {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes changeArrowsColor {
+    0% {
+        color: $main-color;
+    }
+    16.7% {
+        color: #fff;
+    }
+    33.333333% {
+        color: $main-color;
+    }
+    100% {
+        color: $main-color;
     }
 }
 
@@ -208,7 +236,7 @@ p + p {
 
     &.change {
         color: #fff;
-        background-color: $main-color;
+        background: $main-color $bg-texture fixed;
 
         .nav__contact-btn {
             color: $text;
@@ -543,10 +571,13 @@ main {
     }
 
     &__review-title {
+        display: inline-block;
+        padding-bottom: 4px;
         margin-bottom: 1em;
         font-size: 1.25rem;
         font-weight: bold;
         color: darken($text, 13);
+        border-bottom: 2px solid $btn-color;
     }
 
     &__review-text {
@@ -560,6 +591,27 @@ main {
         display: block;
         text-align: right;
         font-size: .95rem;
+    }
+
+    &__review-bar {
+        position: absolute;
+        bottom: 0;
+        left: 64px;
+        right: 64px;
+        height: 4px;
+        overflow: hidden;
+
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top:0;
+            bottom: 0;
+            left:0;
+            right:0;
+            background: $btn-color;
+            animation: timeBar 30s infinite linear;
+        }
     }
 }
 
@@ -586,7 +638,7 @@ main {
         justify-content: center;
         flex-wrap: wrap;
         width: 75%;
-        max-width: 900px;
+        max-width: 980px;
         margin: 0 auto;
 
         li {
@@ -657,7 +709,7 @@ main {
 
 .service {
     height: auto;
-    padding: 64px 0;
+    padding: 114px 0;
     background: #fff;
     margin-top: 96px;
 
@@ -702,9 +754,12 @@ main {
     }
 }
 
+
+// FAQ ------------------------------------------
+
 .faq {
     height: auto;
-    padding: 96px 0;
+    padding: 130px 0;
 
     &__sub-title {
         @include sub-title(currentColor, 48px);
@@ -776,6 +831,78 @@ main {
             content: 'A.';
             margin-right: 10px;
             color: $btn-color;
+        }
+
+        a {
+            text-decoration: underline;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+// contact ------------------------------------
+
+.go-contact {
+    padding-bottom: 72px;
+    text-align: center;
+    font-size: 1.5rem;
+
+    div {
+        display: inline-block;
+        margin-top: 56px;
+        color: $main-color;
+        font-weight: bold;
+        transform: rotate(-90deg) scaleY(1.5);
+
+
+        span:first-child {
+            animation: changeArrowsColor 7.5s infinite;
+            animation-delay: 5s;
+        }
+        span:nth-child(2) {
+            animation: changeArrowsColor 7.5s infinite;
+            animation-delay: 2.5s;
+        }
+        span:last-child {
+            animation: changeArrowsColor 7.5s infinite;
+        }
+    }
+}
+
+.contact {
+    height: auto;
+    padding: 114px 4% calc(114px + (114px - 48px));
+    text-align: center;
+
+    &__btn {
+        @include main-button(50%, $main-color);
+        font-size: 1.75em;
+        box-shadow: 0 0 16px -8px rgba(0, 0, 0, 1);
+
+        a {
+            padding: 1em 2em;
+        }
+    }
+}
+
+// footer --------------------------------------
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    padding: 48px;
+
+    a {
+        margin-right: 1.5em;
+        transition: .2s;
+
+        &:hover {
+            opacity: 0.6;
         }
     }
 }
