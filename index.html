@@ -1,299 +1,368 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
     <title>ウェディングサイト</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/ScrollTrigger.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
-</head>
-<body>
-<header class="hd">
-    <div class="hd__top">
+  </head>
+  <body>
+    <header class="hd">
+      <div class="hd__top">
         <h1 class="hd__title">ウェディングサイト</h1>
-        <a href="#"><img class="hd__logo" src="./images/sampleimg.jpeg" alt=""></a>
-    </div>
-    <nav class="nav">
+        <a href="#"
+          ><img class="hd__logo" src="./images/sampleimg.jpeg" alt=""
+        /></a>
+      </div>
+      <nav class="nav">
         <ul class="nav__list">
-            <li><a href="#about">お店について</a></li>
-            <li><a href="#colle">製作例</a></li>
-            <li><a href="#loca">事例紹介</a></li>
-            <li><a href="#proc">ご利用の流れ</a></li>
-            <li><a href="#service">サービス内容・価格</a></li>
-            <li><a href="#faq">よくあるご質問</a></li>
+          <li><a href="#about">お店について</a></li>
+          <li><a href="#colle">製作例</a></li>
+          <li><a href="#loca">事例紹介</a></li>
+          <li><a href="#proc">ご利用の流れ</a></li>
+          <li><a href="#service">サービス内容・価格</a></li>
+          <li><a href="#faq">よくあるご質問</a></li>
         </ul>
-        <button class="nav__contact-btn"><a href="contact.html" target="_blank">お問い合わせ</a></button>
-    </nav>
-</header>
-<main class="main">
-<section class="sec-w hero" id="hero">
-    <div class="hero__bg"></div>
-    <strong class="hero__catch">
-        <span class="hero__catch--1">はんなりちゃん</span><br>
-        <span class="hero__catch--2">はんなりちゃん・・・</span>
-    </strong>
-    <!-- <div class="hero__news">
+        <button class="nav__contact-btn">
+          <a href="contact.html" target="_blank">お問い合わせ</a>
+        </button>
+      </nav>
+    </header>
+    <main class="main">
+      <section class="sec-w hero" id="hero">
+        <div class="hero__bg"></div>
+        <strong class="hero__catch">
+          <span class="hero__catch--1">はんなりちゃん</span><br />
+          <span class="hero__catch--2">はんなりちゃん・・・</span>
+        </strong>
+        <!-- <div class="hero__news">
         <time class="hero__time" datetime="2021-07-30">5000年70月45日</time>
         <span class="hero__news-desc"><a href=".">コロナかのドレスのお取扱いについて</a></span>
     </div> -->
-</section>
-<div style="height: 88px; background:  url('../images/bg_texture.png') #eee6de fixed;"></div>
-<section class="sec-w about" id="about">
-    <div class="about__desc">
-        <h2 class="about__sub-title">お店について</h2>
-        <p>めっちゃおもろいドレスかえまーちゅ！ピュピュピュピュ</p>
-        <p>人生楽し〜い！！！！！！！！しかし・・・・</p>
-        <p>
-            人生はそんなに甘くはなかった。<br>
+      </section>
+      <div
+        style="
+          height: 88px;
+          background: url('../images/bg_texture.png') #eee6de fixed;
+        "
+      ></div>
+      <section class="sec-w about" id="about">
+        <div class="about__desc">
+          <h2 class="about__sub-title">お店について</h2>
+          <p>めっちゃおもろいドレスかえまーちゅ！ピュピュピュピュ</p>
+          <p>人生楽し〜い！！！！！！！！しかし・・・・</p>
+          <p>
+            人生はそんなに甘くはなかった。<br />
             親の脛をかじりすぎて愛想をつかされ、借金地獄に陥った私は・・・。
             あああああああああああああああああああああああaaaAaあああああああああああああああああああああああaaaAaあああああああああああああああああああああああaaaAaあああああああああああああああああああああああaaaAaあああああああああああああああああああああああaaaAaあああああああああああああああああああああああaaaAa
-        </p>
-    </div>
-    <div class="about__bg--top">
-        <img src="./images/jp-style.png" alt="">
-    </div>
-    <div class="about__bg--bottom">
-        <img src="./images/lathe.png" alt="">
-    </div>
-</section>
-<section class="sec-w colle" id="colle">
-    <div class="colle--inner">
-        <h2 class="colle__sub-title">ドレス・コレクション（製作例）</h2>
-        <div class="colle__panel-area">
-            <ol class="colle__panels">
-                <li class="colle__panel--a">
-                    <a href=".">
-                        <img src="./images/s_1.jpeg" alt="">
-                        <div class="colle__panel-text">
-                            <h3 class="colle__dress-name">主役/華</h3>
-                            <p>Aラインシルエット + 和柄19</p>
-                        </div>
-                    </a>
-                </li>
-                <li class="colle__panel--p">
-                    <a href=".">
-                        <img src="./images/s_2.jpeg" alt="">
-                        <div class="colle__panel-text">
-                            <h3 class="colle__dress-name">SAN-SHI-SUI-MEI</h3>
-                            <p>プリンセスシルエット + 和柄33</p>
-                        </div>
-                    </a>
-                </li>
-                <li class="colle__panel--m">
-                    <a href=".">
-                        <img src="./images/s-3.jpeg" alt="">
-                        <div class="colle__panel-text">
-                            <h3 class="colle__dress-name">グラデーションドレス</h3>
-                            <p>半着物シルエット + 白無垢5</p>
-                        </div>
-                    </a>
-                </li>
-                <li class="colle__panel--s">
-                    <a href=".">
-                        <img src="./images/s-4.jpeg" alt="">
-                        <div class="colle__panel-text">
-                            <h3 class="colle__dress-name">SHIROMUKU</h3>
-                            <p>半着物シルエット + 白無垢2 + オプション帯（レース）</p>
-                        </div>
-                    </a>
-                </li>
-            </ol>
-            <button class="colle__btn"><a href="#proc">製作の流れを見る →</a></button>
+          </p>
         </div>
-    </div>
-</section>
-<section class="sec-w loca" id="loca">
-    <div class="loca--inner">
-        <h2 class="loca__sub-title">事例紹介</h2>
-        <div class="loca__bg">
+        <div class="about__bg--top">
+          <img src="./images/jp-style.png" alt="" />
+        </div>
+        <div class="about__bg--bottom">
+          <img src="./images/lathe.png" alt="" />
+        </div>
+      </section>
+      <section class="sec-w colle" id="colle">
+        <div class="colle--inner">
+          <h2 class="colle__sub-title">ドレス・コレクション（製作例）</h2>
+          <div class="colle__panel-area">
+            <ol class="colle__panels">
+              <li class="colle__panel--a">
+                <a href=".">
+                  <img src="./images/s_1.jpeg" alt="" />
+                  <div class="colle__panel-text">
+                    <h3 class="colle__dress-name">主役/華</h3>
+                    <p>Aラインシルエット + 和柄19</p>
+                  </div>
+                </a>
+              </li>
+              <li class="colle__panel--p">
+                <a href=".">
+                  <img src="./images/s_2.jpeg" alt="" />
+                  <div class="colle__panel-text">
+                    <h3 class="colle__dress-name">SAN-SHI-SUI-MEI</h3>
+                    <p>プリンセスシルエット + 和柄33</p>
+                  </div>
+                </a>
+              </li>
+              <li class="colle__panel--m">
+                <a href=".">
+                  <img src="./images/s-3.jpeg" alt="" />
+                  <div class="colle__panel-text">
+                    <h3 class="colle__dress-name">グラデーションドレス</h3>
+                    <p>半着物シルエット + 白無垢5</p>
+                  </div>
+                </a>
+              </li>
+              <li class="colle__panel--s">
+                <a href=".">
+                  <img src="./images/s-4.jpeg" alt="" />
+                  <div class="colle__panel-text">
+                    <h3 class="colle__dress-name">SHIROMUKU</h3>
+                    <p>半着物シルエット + 白無垢2 + オプション帯（レース）</p>
+                  </div>
+                </a>
+              </li>
+            </ol>
+            <button class="colle__btn">
+              <a href="#proc">製作の流れを見る →</a>
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="sec-w loca" id="loca">
+        <div class="loca--inner">
+          <h2 class="loca__sub-title">事例紹介</h2>
+          <div class="loca__bg">
             <span class="loca__text">喜びの声を沢山いただいております</span>
             <div class="loca__review">
-                <h3 class="loca__review-title">世界で1冊の宝物ができました</h3>
-                <div class="loca__review-text">
-                    イメージ以上の仕上がりで、実際に具現化する事でその価値が高くなり宝物になりました。
-                </div>
-                <span class="loca__review-name">佐藤輝様</span>
+              <h3 class="loca__review-title">世界で1冊の宝物ができました</h3>
+              <div class="loca__review-text">
+                イメージ以上の仕上がりで、実際に具現化する事でその価値が高くなり宝物になりました。
+              </div>
+              <span class="loca__review-name">佐藤輝様</span>
             </div>
             <div class="loca__review-bar"></div>
             <div class="loca__secret-bg"></div>
+          </div>
         </div>
-    </div>
-</section>
-<section class="sec-w proc" id="proc">
-    <div class="proc--inner">
-        <h2 class="proc__sub-title">ご利用の流れ</h2>
-        <ol class="proc__process">
+      </section>
+      <section class="sec-w proc" id="proc">
+        <div class="proc--inner">
+          <h2 class="proc__sub-title">ご利用の流れ</h2>
+          <ol class="proc__process">
             <li>
-                <span class="proc__num">01</span><br>
-                <h3 class="proc__name">お申し込み</h3>
-                <div class="proc__img"><img src="./images/procimg-1.jpeg" alt=""></div>
-                <p class="proc__detail">HPからお申し込みください。</p>
+              <span class="proc__num">01</span><br />
+              <h3 class="proc__name">お申し込み</h3>
+              <div class="proc__img">
+                <img src="./images/procimg-1.jpeg" alt="" />
+              </div>
+              <p class="proc__detail">HPからお申し込みください。</p>
             </li>
             <li>
-                <span class="proc__num">02</span><br>
-                <h3 class="proc__name">型・柄決め</h3>
-                <div class="proc__img"><img src="./images/procimg-2.jpeg" alt=""></div>
-                <p class="proc__detail">店へお越しいただき、ドレスのシルエットと柄を沢山の種類の中から選んでいただきます。</p>
+              <span class="proc__num">02</span><br />
+              <h3 class="proc__name">型・柄決め</h3>
+              <div class="proc__img">
+                <img src="./images/procimg-2.jpeg" alt="" />
+              </div>
+              <p class="proc__detail">
+                店へお越しいただき、ドレスのシルエットと柄を沢山の種類の中から選んでいただきます。
+              </p>
             </li>
             <li>
-                <span class="proc__num">03</span><br>
-                <h3 class="proc__name">オプション追加</h3>
-                <div class="proc__img"><img src="./images/procimg-3.jpeg" alt=""></div>
-                <p class="proc__detail">ご要望に合わせて、ドレス本体にレースなどのオプションを追加することができます。（追加料金が必要です）オーダーメイド可能です。</p>
+              <span class="proc__num">03</span><br />
+              <h3 class="proc__name">オプション追加</h3>
+              <div class="proc__img">
+                <img src="./images/procimg-3.jpeg" alt="" />
+              </div>
+              <p class="proc__detail">
+                ご要望に合わせて、ドレス本体にレースなどのオプションを追加することができます。（追加料金が必要です）オーダーメイド可能です。
+              </p>
             </li>
             <li class="--noarrow">
-                <span class="proc__num">04</span><br>
-                <h3 class="proc__name">サイズ決め</h3>
-                <div class="proc__img"><img src="./images/procimg-4.jpeg" alt=""></div>
-                <p class="proc__detail">お客様のお身体のサイズを測らせていただき、それを基準にサイズの決定をいたします。</p>
+              <span class="proc__num">04</span><br />
+              <h3 class="proc__name">サイズ決め</h3>
+              <div class="proc__img">
+                <img src="./images/procimg-4.jpeg" alt="" />
+              </div>
+              <p class="proc__detail">
+                お客様のお身体のサイズを測らせていただき、それを基準にサイズの決定をいたします。
+              </p>
             </li>
             <li class="--mar">
-                <span class="proc__num">05</span><br>
-                <h3 class="proc__name">価格確認・支払い</h3>
-                <div class="proc__img"><img src="./images/procimg-6.jpeg" alt=""></div>
-                <p class="proc__detail">店内にてドレスや小物の合計価格を確認後、後日お支払いいただきます。</p>
+              <span class="proc__num">05</span><br />
+              <h3 class="proc__name">価格確認・支払い</h3>
+              <div class="proc__img">
+                <img src="./images/procimg-6.jpeg" alt="" />
+              </div>
+              <p class="proc__detail">
+                店内にてドレスや小物の合計価格を確認後、後日お支払いいただきます。
+              </p>
             </li>
             <li class="--mar">
-                <span class="proc__num">06</span><br>
-                <h3 class="proc__name">製作</h3>
-                <div class="proc__img"><img src="./images/procimg-7.jpeg" alt=""></div>
-                <p class="proc__detail">ドレスを制作します。</p>
+              <span class="proc__num">06</span><br />
+              <h3 class="proc__name">製作</h3>
+              <div class="proc__img">
+                <img src="./images/procimg-7.jpeg" alt="" />
+              </div>
+              <p class="proc__detail">ドレスを制作します。</p>
             </li>
             <li class="--mar">
-                <span class="proc__num">07</span><br>
-                <h3 class="proc__name">試着・小物選び</h3>
-                <div class="proc__img"><img src="./images/procimg-5.png" alt=""></div>
-                <p class="proc__detail">完成したドレスをご試着していただきます。ドレスにあった帽子やリボン、手袋などを選ぶことができます。オーダーメイド可能です。</p>
+              <span class="proc__num">07</span><br />
+              <h3 class="proc__name">試着・小物選び</h3>
+              <div class="proc__img">
+                <img src="./images/procimg-5.png" alt="" />
+              </div>
+              <p class="proc__detail">
+                完成したドレスをご試着していただきます。ドレスにあった帽子やリボン、手袋などを選ぶことができます。オーダーメイド可能です。
+              </p>
             </li>
             <li class="--noarrow --mar">
-                <span class="proc__num">08</span><br>
-                <h3 class="proc__name">納品</h3>
-                <div class="proc__img"><img src="./images/procimg-8.jpeg" alt=""></div>
-                <p class="proc__detail">挙式1週間前に最終フィッティングを致しました後、ご指定の日時、場所へ発送いたします。</p>
+              <span class="proc__num">08</span><br />
+              <h3 class="proc__name">納品</h3>
+              <div class="proc__img">
+                <img src="./images/procimg-8.jpeg" alt="" />
+              </div>
+              <p class="proc__detail">
+                挙式1週間前に最終フィッティングを致しました後、ご指定の日時、場所へ発送いたします。
+              </p>
             </li>
-        </ol>
-    </div>
-</section>
-<section class="sec-w service" id="service">
-    <h2 class="service__sub-title">サービス内容・価格</h2>
-    <table class="service__table">
-        <tr>
+          </ol>
+        </div>
+      </section>
+      <section class="sec-w service" id="service">
+        <h2 class="service__sub-title">サービス内容・価格</h2>
+        <table class="service__table">
+          <tr>
             <th>価格</th>
             <td>250,000円（税抜）〜</td>
-        </tr>
-        <tr>
+          </tr>
+          <tr>
             <th>基本内容</th>
             <td>
-                <ul>
-                    <li>セミオーダードレス １着</li>
-                    <li>ウェディングシューズ　１足</li>
-                    <li>小物（帽子・リボン・手袋・スカーフ・ハンカチ） 各１点まで</li>
-                    <li>アクセサリー ３点まで</li>
-                    <li>式場発送サービス</li>
-                </ul>
+              <ul>
+                <li>セミオーダードレス １着</li>
+                <li>ウェディングシューズ　１足</li>
+                <li>
+                  小物（帽子・リボン・手袋・スカーフ・ハンカチ） 各１点まで
+                </li>
+                <li>アクセサリー ３点まで</li>
+                <li>式場発送サービス</li>
+              </ul>
             </td>
-        </tr>
-        <tr>
+          </tr>
+          <tr>
             <th>オプション（追加料金）</th>
             <td>
-                <ul>
-                    <li>ドレスへの飾り追加</li>
-                    <li>ドレス装飾品のオーダーメード</li>
-                    <li>小物追加</li>
-                    <li>アクセサリー追加</li>
-                    <li>和柄持ち込み</li>
-                </ul>
+              <ul>
+                <li>ドレスへの飾り追加</li>
+                <li>ドレス装飾品のオーダーメード</li>
+                <li>小物追加</li>
+                <li>アクセサリー追加</li>
+                <li>和柄持ち込み</li>
+              </ul>
             </td>
-        </tr>
-    </table>
-</section>
-<section class="sec-w faq" id="faq">
-    <div class="faq--inner">
-        <h2 class="faq__sub-title">よくあるご質問</h2>
-        <dl class="faq__accordion js-accordion">
+          </tr>
+        </table>
+      </section>
+      <section class="sec-w faq" id="faq">
+        <div class="faq--inner">
+          <h2 class="faq__sub-title">よくあるご質問</h2>
+          <dl class="faq__accordion js-accordion">
             <div class="faq__accordion-item js-accordion-trigger">
-                <dt class="faq__accordion-title">メールが届きません。返事がありません。</dt>
-                <dd class="faq__accordion-content">
-                    お待たせして申し訳ございません。<br>
-                    2つの可能性が考えられます。<br>
-                    1 ）gmail,hotmailなどのフリーメールをご利用の場合、自動的に迷惑メールフォルダに振り分けられてしまうことがあるため、迷惑メールフォルダをご確認ください。<br>
-                    2 ）携帯、スマートフォン、PHSのメールアドレスの場合、携帯電話ドメイン（i.softbank.jpやdocomo.ne.jpなど）以外のメールの受診拒否設定のため、メールがブロックされている場合がございます。お客様の端末の「迷惑メール設定」と「ドメイン拒否設定」をご解除いただき、改めてご登録くださいますよう、お願いいたします。<br>
-                    上記方法をお試しになられてもメールが届かない場合は、info@example.jp までお問い合わせください。
-                </dd>
+              <dt class="faq__accordion-title">
+                メールが届きません。返事がありません。
+              </dt>
+              <dd class="faq__accordion-content">
+                お待たせして申し訳ございません。<br />
+                2つの可能性が考えられます。<br />
+                1
+                ）gmail,hotmailなどのフリーメールをご利用の場合、自動的に迷惑メールフォルダに振り分けられてしまうことがあるため、迷惑メールフォルダをご確認ください。<br />
+                2
+                ）携帯、スマートフォン、PHSのメールアドレスの場合、携帯電話ドメイン（i.softbank.jpやdocomo.ne.jpなど）以外のメールの受診拒否設定のため、メールがブロックされている場合がございます。お客様の端末の「迷惑メール設定」と「ドメイン拒否設定」をご解除いただき、改めてご登録くださいますよう、お願いいたします。<br />
+                上記方法をお試しになられてもメールが届かない場合は、info@example.jp
+                までお問い合わせください。
+              </dd>
             </div>
             <div class="faq__accordion-item js-accordion-trigger">
-                <dt class="faq__accordion-title">電話での予約は可能ですか？</dt>
-                <dd class="faq__accordion-content">
-                    申し訳ございません。電話でのご予約・カタログ発送は受け付けておりません。webのお問い合わせフォームのみでの受付となっております。<br>
-                    ご不明な点などでのご相談のみ電話（<a fref="tel:0123-456-7890">0123-456-7890</a>）・メール（<a href="mailTo:mail@example.com">mail@example.com</a>）を受け付けております。
-                </dd>
+              <dt class="faq__accordion-title">電話での予約は可能ですか？</dt>
+              <dd class="faq__accordion-content">
+                申し訳ございません。電話でのご予約・カタログ発送は受け付けておりません。webのお問い合わせフォームのみでの受付となっております。<br />
+                ご不明な点などでのご相談のみ電話（<a href="tel:0123-456-7890"
+                  >0123-456-7890</a
+                >）・メール（<a href="mailTo:mail@example.com"
+                  >mail@example.com</a
+                >）を受け付けております。
+              </dd>
             </div>
             <div class="faq__accordion-item js-accordion-trigger">
-                <dt class="faq__accordion-title">注文から発送、到着までどの程度かかりますか？</dt>
-                <dd class="faq__accordion-content">
-                    入金を確認してからドレスを製作いたします。通常2週間～で製作し発送いたします。<br>
-                    オーダーメイド商品を含む場合は製作時間が長くなってしまいますので、納期に間に合うようお早めにご注文ください。まずはお気軽にお問い合わせください。
-                </dd>
+              <dt class="faq__accordion-title">
+                注文から発送、到着までどの程度かかりますか？
+              </dt>
+              <dd class="faq__accordion-content">
+                入金を確認してからドレスを製作いたします。通常2週間～で製作し発送いたします。<br />
+                オーダーメイド商品を含む場合は製作時間が長くなってしまいますので、納期に間に合うようお早めにご注文ください。まずはお気軽にお問い合わせください。
+              </dd>
             </div>
             <div class="faq__accordion-item js-accordion-trigger">
-                <dt class="faq__accordion-title">キャンセルは可能ですか？</dt>
-                <dd class="faq__accordion-content">お申し込みからお客様のお身体のサイズを測るまでの間であれば可能です。キャンセル料もかかりません。</dd>
+              <dt class="faq__accordion-title">キャンセルは可能ですか？</dt>
+              <dd class="faq__accordion-content">
+                お申し込みからお客様のお身体のサイズを測るまでの間であれば可能です。キャンセル料もかかりません。
+              </dd>
             </div>
             <div class="faq__accordion-item js-accordion-trigger">
-                <dt class="faq__accordion-title">オーダーメイドの装飾品を作って欲しい。</dt>
-                <dd class="faq__accordion-content">
-                    お客様自身で詳細なデザイン画をご用意ください。PCなどで作成した場合、プリントアウトして指定の日時までにご提出ください。<br>
-                    可能な限り再現させていただきますが、特殊な形状・素材である場合は完全に再現することができない可能性がございますので、ご了承ください。
-                </dd>
+              <dt class="faq__accordion-title">
+                オーダーメイドの装飾品を作って欲しい。
+              </dt>
+              <dd class="faq__accordion-content">
+                お客様自身で詳細なデザイン画をご用意ください。PCなどで作成した場合、プリントアウトして指定の日時までにご提出ください。<br />
+                可能な限り再現させていただきますが、特殊な形状・素材である場合は完全に再現することができない可能性がございますので、ご了承ください。
+              </dd>
             </div>
             <div class="faq__accordion-item js-accordion-trigger">
-                <dt class="faq__accordion-title">挙式の何ヶ月前くらいにお問い合わせすればいいですか？</dt>
-                <dd class="faq__accordion-content">
-                    制作期間が長くかかるため、最低でも7ヶ月前にはお問い合わせください。
-                </dd>
+              <dt class="faq__accordion-title">
+                挙式の何ヶ月前くらいにお問い合わせすればいいですか？
+              </dt>
+              <dd class="faq__accordion-content">
+                制作期間が長くかかるため、最低でも7ヶ月前にはお問い合わせください。
+              </dd>
             </div>
             <div class="faq__accordion-item js-accordion-trigger">
-                <dt class="faq__accordion-title">和柄にはどんなものがありますか？</dt>
-                <dd class="faq__accordion-content">
-                    無料でカタログを発送いたします。お問い合わせ画面にて、種類を「和柄カタログ発送」にして送信してください。
-                </dd>
+              <dt class="faq__accordion-title">
+                和柄にはどんなものがありますか？
+              </dt>
+              <dd class="faq__accordion-content">
+                無料でカタログを発送いたします。お問い合わせ画面にて、種類を「和柄カタログ発送」にして送信してください。
+              </dd>
             </div>
             <div class="faq__accordion-item js-accordion-trigger">
-                <dt class="faq__accordion-title">支払い方法はなにがありますか？</dt>
-                <dd class="faq__accordion-content">
-                    クレジットカードまたは口座振込でのお支払いとなります。
-                </dd>
+              <dt class="faq__accordion-title">
+                支払い方法はなにがありますか？
+              </dt>
+              <dd class="faq__accordion-content">
+                クレジットカードまたは口座振込でのお支払いとなります。
+              </dd>
             </div>
             <div class="faq__accordion-item js-accordion-trigger">
-                <dt class="faq__accordion-title">わからないことがあるので相談したい。</dt>
-                <dd class="faq__accordion-content">
-                    いつでも歓迎しております。お問い合わせ画面にて、種類を「ご相談」にして送信してください。
-                </dd>
+              <dt class="faq__accordion-title">
+                わからないことがあるので相談したい。
+              </dt>
+              <dd class="faq__accordion-content">
+                いつでも歓迎しております。お問い合わせ画面にて、種類を「ご相談」にして送信してください。
+              </dd>
             </div>
-        </dl>
-    </div>
-</section>
-<section class="sec-w contact" id="contact">
-    <div class="go-contact">
-        <p>まずはお気軽にご相談ください。</p>
-        <div>
-            <span>&lt;</span>
-            <span>&lt;</span>
-            <span>&lt;</span>
+          </dl>
         </div>
-    </div>
-    <button class="contact__btn"><a href="contact.html" target="_blank">お問い合わせ</a></button>
-</section>
-</main>
-<footer class="sec-w footer">
-    <div class="footer__requires"><a href=".">プライバシーポリシー</a><a href=".">特定商取引法に基づく表記</a><a href=".">利用規約</a></div>
-    <small class="footer__copy">Copyright&copy; ウェディングサイト</small>
-</footer>
-<script src="js/index.js"></script>
-</body>
+      </section>
+      <section class="sec-w contact" id="contact">
+        <div class="go-contact">
+          <p>まずはお気軽にご相談ください。</p>
+          <div>
+            <span>&lt;</span>
+            <span>&lt;</span>
+            <span>&lt;</span>
+          </div>
+        </div>
+        <button class="contact__btn">
+          <a href="contact.html" target="_blank">お問い合わせ</a>
+        </button>
+      </section>
+    </main>
+    <footer class="sec-w footer">
+      <div class="footer__requires">
+        <a href=".">プライバシーポリシー</a
+        ><a href=".">特定商取引法に基づく表記</a><a href=".">利用規約</a>
+      </div>
+      <small class="footer__copy">Copyright&copy; ウェディングサイト</small>
+    </footer>
+    <script src="js/index.js"></script>
+  </body>
 </html>

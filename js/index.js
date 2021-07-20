@@ -63,29 +63,36 @@ ScrollReveal().reveal(".loca__text", {
 });
 
 const locaBg = ["url(../images/loca_2.jpeg)", "url(../images/loca_1.jpeg)"];
-const locaTitle = ['大物ルーキーですが・・・', 'ゴールデングラブ賞とれますよ'];
+const locaTitle = ["大物ルーキーですが・・・", "ゴールデングラブ賞とれますよ"];
 const locaText = [
-  'このドレスをきてからは、三振することがなくなりました！',
-  'どんな球でもキャッチできるようになりました。TeamUmenoにもおすすめしようと思います。'
-]
-const locaName = ['佐藤輝様', '梅野様'];
+  "このドレスをきてからは、三振することがなくなりました！",
+  "どんな球でもキャッチできるようになりました。TeamUmenoにもおすすめしようと思います。",
+];
+const locaName = ["佐藤輝様", "梅野様"];
 
 let locaBgNum = 0;
 
 window.addEventListener("DOMContentLoaded", () => {
-  document.querySelector(".loca__bg").style.backgroundImage = locaBg[locaBg.length - 1];
-  document.querySelector(".loca__review-title").textContent = locaTitle[locaTitle.length - 1];
-  document.querySelector(".loca__review-text").textContent = locaText[locaText.length - 1];
-  document.querySelector(".loca__review-name").textContent = locaName[locaName.length - 1];
+  document.querySelector(".loca__bg").style.backgroundImage =
+    locaBg[locaBg.length - 1];
+  document.querySelector(".loca__review-title").textContent =
+    locaTitle[locaTitle.length - 1];
+  document.querySelector(".loca__review-text").textContent =
+    locaText[locaText.length - 1];
+  document.querySelector(".loca__review-name").textContent =
+    locaName[locaName.length - 1];
 
   setInterval(() => {
     document.querySelector(".loca__secret-bg").style.animation =
       "changeLocaBg 1s";
     document.querySelector(".loca__bg").style.backgroundImage =
       locaBg[locaBgNum];
-      document.querySelector(".loca__review-title").textContent = locaTitle[locaBgNum];
-      document.querySelector(".loca__review-text").textContent = locaText[locaBgNum];
-      document.querySelector(".loca__review-name").textContent = locaName[locaBgNum];
+    document.querySelector(".loca__review-title").textContent =
+      locaTitle[locaBgNum];
+    document.querySelector(".loca__review-text").textContent =
+      locaText[locaBgNum];
+    document.querySelector(".loca__review-name").textContent =
+      locaName[locaBgNum];
     setTimeout(() => {
       document.querySelector(".loca__secret-bg").style.animation =
         "changeLocaBg2 1s";

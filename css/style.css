@@ -1,8 +1,9 @@
+@charset "UTF-8";
 @import url("https://cdn.jsdelivr.net/npm/destyle.css@2.0.2/destyle.css");
 @import url("https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&display=swap");
-.ChangeButtonsBg::before, .hd .nav__contact-btn::before, .hd .nav__contact-btn::after, .colle__btn::before, .colle__btn::after, .contact__btn::before, .contact__btn::after {
+.ChangeButtonsBg::before, .hd .nav__contact-btn::before, .hd .nav__contact-btn::after, .colle__btn::before, .colle__btn::after, .contact__btn::before, .contact__btn::after, .form__submit::before, .form__submit::after {
   display: block;
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -142,7 +143,7 @@ html {
 }
 
 body {
-  font-family: 'Shippori Mincho', serif;
+  font-family: "Shippori Mincho", serif;
   font-size: 1rem;
   font-smooth: smooth;
   -webkit-font-smooth: smooth;
@@ -188,8 +189,8 @@ p + p {
   text-align: center;
   font-size: 1.125rem;
   color: #000;
-  -webkit-transition: all .4s;
-  transition: all .4s;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
 .hd__title {
@@ -231,14 +232,14 @@ p + p {
   left: 0;
   right: 0;
   border-bottom: 1px solid currentColor;
-  -webkit-animation: moveMenuLine .4s forwards;
-          animation: moveMenuLine .4s forwards;
+  -webkit-animation: moveMenuLine 0.4s forwards;
+          animation: moveMenuLine 0.4s forwards;
   z-index: -1;
 }
 
 .hd .nav__list li a:hover::before {
-  -webkit-animation: moveMenuLineHover .4s forwards;
-          animation: moveMenuLineHover .4s forwards;
+  -webkit-animation: moveMenuLineHover 0.4s forwards;
+          animation: moveMenuLineHover 0.4s forwards;
 }
 
 .hd .nav__contact-btn {
@@ -254,15 +255,15 @@ p + p {
 
 .hd .nav__contact-btn a {
   display: block;
-  padding: .75em 1em;
+  padding: 0.75em 1em;
 }
 
 .hd .nav__contact-btn::before {
   background: #9f2624 url("../images/bg_texture.png") fixed;
   -webkit-transform: translateX(0%);
           transform: translateX(0%);
-  -webkit-transition: all .4s;
-  transition: all .4s;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
 .hd .nav__contact-btn:hover::before {
@@ -274,8 +275,8 @@ p + p {
   background: #b42b29 url("../images/bg_texture.png") fixed;
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
-  -webkit-transition: all .4s;
-  transition: all .4s;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
 .hd .nav__contact-btn:hover::after {
@@ -349,7 +350,7 @@ main {
 }
 
 .hero__time::after {
-  content: '';
+  content: "";
   position: absolute;
   right: -16.31206px;
   top: 50%;
@@ -535,12 +536,12 @@ main {
 
 .colle__dress-name {
   color: #0c0c0c;
-  margin-bottom: .4em;
+  margin-bottom: 0.4em;
   font-size: 1.35rem;
 }
 
 .colle__dress-name::first-letter {
-  color: #D9AB42;
+  color: #d9ab42;
 }
 
 .colle__btn {
@@ -561,15 +562,15 @@ main {
 
 .colle__btn a {
   display: block;
-  padding: .75em 1em;
+  padding: 0.75em 1em;
 }
 
 .colle__btn::before {
   background: #9f2624 url("../images/bg_texture.png") fixed;
   -webkit-transform: translateX(0%);
           transform: translateX(0%);
-  -webkit-transition: all .4s;
-  transition: all .4s;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
 .colle__btn:hover::before {
@@ -581,8 +582,8 @@ main {
   background: #b42b29 url("../images/bg_texture.png") fixed;
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
-  -webkit-transition: all .4s;
-  transition: all .4s;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
 .colle__btn:hover::after {
@@ -604,7 +605,7 @@ main {
   top: 0;
   left: 0;
   width: 100%;
-  padding: .75em 1em;
+  padding: 0.75em 1em;
   z-index: 2;
 }
 
@@ -661,7 +662,7 @@ main {
   position: absolute;
   right: -3%;
   bottom: 150px;
-  padding: .5em 1em;
+  padding: 0.5em 1em;
   font-size: 1.5rem;
   background: #fff url("../images/bg_texture.png");
   z-index: 5;
@@ -684,8 +685,7 @@ main {
   margin-bottom: 1em;
   font-size: 1.25rem;
   font-weight: bold;
-  color: #352b2d;
-  border-bottom: 2px solid #D9AB42;
+  border-bottom: 2px solid #d9ab42;
 }
 
 .loca__review-text {
@@ -697,7 +697,7 @@ main {
 .loca__review-name {
   display: block;
   text-align: right;
-  font-size: .95rem;
+  font-size: 0.95rem;
 }
 
 .loca__review-bar {
@@ -717,7 +717,7 @@ main {
   bottom: 0;
   left: 0;
   right: 0;
-  background: #D9AB42;
+  background: #d9ab42;
   -webkit-animation: timeBar 30s infinite linear;
           animation: timeBar 30s infinite linear;
 }
@@ -807,7 +807,7 @@ main {
 }
 
 .proc__num::first-letter {
-  color: #D9AB42;
+  color: #d9ab42;
 }
 
 .proc__name {
@@ -852,7 +852,8 @@ main {
   margin: auto;
 }
 
-.service td, .service th {
+.service td,
+.service th {
   padding: 1em;
 }
 
@@ -869,7 +870,7 @@ main {
   content: "";
   width: 48px;
   height: 2px;
-  background-color: #D9AB42;
+  background-color: #d9ab42;
   position: absolute;
   top: calc(1em + 0.5em - 1px);
   right: 0px;
@@ -922,8 +923,8 @@ main {
   top: calc(1.25rem / 2 + 1.25rem * 2 - 16px);
   width: 32px;
   height: 32px;
-  -webkit-transition: .3s;
-  transition: .3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .faq .js-accordion-trigger.is-active::after {
@@ -940,9 +941,9 @@ main {
 
 .faq__accordion-title::before {
   display: inline-block;
-  content: 'Q.';
+  content: "Q.";
   margin-right: 10px;
-  color: #D9AB42;
+  color: #d9ab42;
 }
 
 .faq__accordion-content {
@@ -958,9 +959,9 @@ main {
 
 .faq__accordion-content::before {
   display: inline-block;
-  content: 'A.';
+  content: "A.";
   margin-right: 10px;
-  color: #D9AB42;
+  color: #d9ab42;
 }
 
 .faq__accordion-content a {
@@ -987,22 +988,22 @@ main {
 }
 
 .go-contact div span:first-child {
-  -webkit-animation: changeArrowsColor 7.5s infinite;
-          animation: changeArrowsColor 7.5s infinite;
-  -webkit-animation-delay: 5s;
-          animation-delay: 5s;
-}
-
-.go-contact div span:nth-child(2) {
-  -webkit-animation: changeArrowsColor 7.5s infinite;
-          animation: changeArrowsColor 7.5s infinite;
+  -webkit-animation: changeArrowsColor 3.75s infinite linear;
+          animation: changeArrowsColor 3.75s infinite linear;
   -webkit-animation-delay: 2.5s;
           animation-delay: 2.5s;
 }
 
+.go-contact div span:nth-child(2) {
+  -webkit-animation: changeArrowsColor 3.75s infinite linear;
+          animation: changeArrowsColor 3.75s infinite linear;
+  -webkit-animation-delay: 1.25s;
+          animation-delay: 1.25s;
+}
+
 .go-contact div span:last-child {
-  -webkit-animation: changeArrowsColor 7.5s infinite;
-          animation: changeArrowsColor 7.5s infinite;
+  -webkit-animation: changeArrowsColor 3.75s infinite linear;
+          animation: changeArrowsColor 3.75s infinite linear;
 }
 
 .contact {
@@ -1027,15 +1028,15 @@ main {
 
 .contact__btn a {
   display: block;
-  padding: .75em 1em;
+  padding: 0.75em 1em;
 }
 
 .contact__btn::before {
   background: #9f2624 url("../images/bg_texture.png") fixed;
   -webkit-transform: translateX(0%);
           transform: translateX(0%);
-  -webkit-transition: all .4s;
-  transition: all .4s;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
 .contact__btn:hover::before {
@@ -1047,8 +1048,8 @@ main {
   background: #b42b29 url("../images/bg_texture.png") fixed;
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
-  -webkit-transition: all .4s;
-  transition: all .4s;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
 .contact__btn:hover::after {
@@ -1076,11 +1077,463 @@ main {
 
 .footer a {
   margin-right: 1.5em;
-  -webkit-transition: .2s;
-  transition: .2s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .footer a:hover {
   opacity: 0.6;
+}
+
+.ct_contact-main {
+  margin: 88px auto;
+  padding: 0 4%;
+  text-align: center;
+  max-width: 1100px;
+}
+
+.ct_other {
+  margin: 64px 0;
+}
+
+.ct_other a {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.ct_other a:hover {
+  text-decoration: none;
+}
+
+.form {
+  font-size: 16px;
+}
+
+.form__sub-title {
+  display: inline-block;
+  padding: 8px;
+  font-size: 2rem;
+  border-bottom: 4px solid #d9ab42;
+}
+
+.form__table {
+  width: 100%;
+  text-align: left;
+}
+
+.form__table .--require::after {
+  content: '必須';
+  margin-left: 8px;
+  padding: 2px 4px;
+  font-size: .7rem;
+  color: #fff;
+  background-color: #9f2624;
+}
+
+.form__table th, .form__table td {
+  padding: 32px 0;
+  vertical-align: middle;
+}
+
+.form__table th {
+  width: 30%;
+}
+
+.form__table fieldset {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  padding: 2px;
+}
+
+.form__table fieldset[name="address"] {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.form__table fieldset[name="address"] .item {
+  width: 100%;
+  margin: 8px 0;
+}
+
+.form__table fieldset[name="address"] .item input {
+  width: 50%;
+}
+
+.form__table .item {
+  margin-right: 32px;
+}
+
+.form__table .item span {
+  margin: 0 4px;
+}
+
+.form__table small {
+  margin-left: 8px;
+  color: rgba(90, 73, 76, 0.7);
+}
+
+.form__table label {
+  margin-right: 1em;
+}
+
+.form__table input {
+  padding: 1em 1em;
+  background-color: #fff;
+  border-radius: 4px;
+  border: 2px solid #fff;
+}
+
+.form__table input:focus {
+  border-color: #d9ab42;
+}
+
+.form__table input[type="email"] {
+  width: 80%;
+}
+
+.form__table select {
+  position: relative;
+  display: block;
+  width: 200px;
+  margin-right: auto;
+  padding: 1em;
+  background-color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  background-image: linear-gradient(45deg, transparent 50%, #9f2624 50%), linear-gradient(135deg, #9f2624 50%, transparent 50%);
+  background-position: calc(100% - 20px) calc(1em + 5px), calc(100% - 15px) calc(1em + 5px), 100% 0;
+  background-size: 5px 5px, 5px 5px, 2.5em 2.5em;
+  background-repeat: no-repeat;
+}
+
+.form__table textarea {
+  width: 80%;
+  padding: 1em;
+  min-height: 320px;
+  background-color: #fff;
+  border-radius: 4px;
+  border: 2px solid #fff;
+}
+
+.form__table textarea:focus {
+  border-color: #d9ab42;
+}
+
+.form__submit {
+  display: inline-block;
+  position: relative;
+  width: 40%;
+  font-size: 1.25rem;
+  color: #fff;
+  vertical-align: middle;
+  border-radius: 4px;
+  overflow: hidden;
+  font-size: 2rem;
+  margin-top: 56px;
+}
+
+.form__submit a {
+  display: block;
+  padding: 0.75em 1em;
+}
+
+.form__submit::before {
+  background: #9f2624 url("../images/bg_texture.png") fixed;
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.form__submit:hover::before {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+.form__submit::after {
+  background: #b42b29 url("../images/bg_texture.png") fixed;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.form__submit:hover::after {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.form__submit input {
+  padding: 0.5em 1em;
+}
+
+@media screen and (max-width: 680px) {
+  .hd {
+    display: none;
+  }
+  .sec-w {
+    width: 100%;
+  }
+  .hero__bg {
+    width: 92%;
+    margin: 0 auto;
+    background-size: contain;
+    background-position: center 80%;
+  }
+  .hero__catch {
+    font-size: 1.75rem;
+  }
+  .colle {
+    height: auto;
+    padding: 64px 0;
+  }
+  .colle__sub-title {
+    width: 90%;
+    padding-right: 1em;
+    margin-bottom: 32px;
+  }
+  .colle__panel-area {
+    width: 92%;
+  }
+  .colle__panels {
+    display: block;
+    height: auto;
+  }
+  .colle__panels li {
+    margin-bottom: 16px;
+  }
+  .loca {
+    height: auto;
+    padding: 64px 0;
+  }
+  .loca__sub-title {
+    width: 90%;
+    padding-right: 1em;
+    margin-bottom: 32px;
+  }
+  .loca__bg {
+    width: 100%;
+    background-position: center bottom;
+    border-radius: 0px;
+  }
+  .loca__review {
+    width: 100%;
+    top: unset;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+  }
+  .loca__review-bar {
+    left: 0;
+    right: 0;
+  }
+  .loca__text {
+    font-size: 1.25rem;
+    bottom: unset;
+    top: 48px;
+    right: 0px;
+  }
+  .loca__secret-bg {
+    border-radius: 0;
+  }
+  .proc {
+    height: auto;
+    padding: 64px 0;
+  }
+  .proc__sub-title {
+    width: 90%;
+    padding-right: 1em;
+    margin-bottom: 32px;
+  }
+  .proc__process {
+    width: 92%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .proc__process li {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 88px;
+  }
+  .proc__process li.--mar {
+    padding: 0;
+  }
+  .proc__process li::after {
+    display: block;
+    content: "";
+    background: url("../images/right-arrow.png") no-repeat;
+    background-size: contain;
+    width: 24px;
+    height: 24px;
+    top: unset !important;
+    position: absolute !important;
+    bottom: -60px !important;
+    left: calc(50% - 12px) !important;
+    -webkit-transform: rotate(90deg) !important;
+            transform: rotate(90deg) !important;
+  }
+  .proc__process li.--noarrow.--mar {
+    margin-bottom: 0;
+  }
+  .proc__process li.--noarrow.--mar::after {
+    display: none;
+  }
+  .proc__name {
+    margin-top: 0;
+  }
+  .proc__detail {
+    padding: 0 16px;
+  }
+  .service {
+    padding: 64px 0;
+    margin-top: 0;
+  }
+  .service__sub-title {
+    width: 90%;
+    padding-right: 1em;
+    margin-bottom: 32px;
+  }
+  .service__table th, .service__table td {
+    display: block;
+    width: 100%;
+  }
+  .service__table th {
+    padding-bottom: 0;
+    text-align: left;
+  }
+  .service__table th::after {
+    width: 30%;
+  }
+  .service__table td {
+    padding-left: 1.5em;
+  }
+  .faq {
+    padding: 64px 0;
+  }
+  .faq__sub-title {
+    width: 90%;
+    padding-right: 1em;
+    margin-bottom: 32px;
+  }
+  .faq__accordion {
+    width: 92%;
+    margin: auto;
+  }
+  .faq__accordion-title {
+    padding-right: 3em;
+    font-size: 1rem;
+  }
+  .faq__accordion-content {
+    padding-right: 3rem;
+    padding-top: 0;
+  }
+  .faq .js-accordion-trigger::after {
+    width: 24px;
+    height: 24px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  .contact {
+    padding: 64px 0;
+  }
+  .contact__btn {
+    width: 80%;
+  }
+  .footer {
+    display: block;
+    padding: 64px 4% 1em;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(20%, transparent), color-stop(20%, #fff));
+    background: linear-gradient(to bottom, transparent 20%, #fff 20% 100%);
+  }
+  .footer__requires {
+    margin-bottom: 24px;
+  }
+  .footer__requires * {
+    display: block;
+    margin-bottom: 1em;
+  }
+  .ct_contact-main {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+  .ct_other {
+    margin: 32px 0;
+  }
+  .form__content {
+    width: 100%;
+  }
+  .form__sub-title {
+    font-size: 1.8rem;
+  }
+  .form__table th, .form__table td {
+    display: block;
+    width: 100%;
+    padding: 0;
+  }
+  .form__table th {
+    padding-bottom: 1em;
+  }
+  .form__table td {
+    padding-bottom: 48px;
+  }
+  .form__table fieldset {
+    display: block;
+  }
+  .form__table fieldset[name="address"] .item input {
+    width: 100%;
+  }
+  .form__table select {
+    width: 100%;
+  }
+  .form__table input {
+    width: 100%;
+  }
+  .form__table input[type="email"] {
+    width: 100%;
+  }
+  .form__table input[name='tel1'] {
+    width: 25%;
+  }
+  .form__table input[name='tel2'] {
+    width: 35%;
+  }
+  .form__table input[name='tel3'] {
+    width: 25%;
+  }
+  .form__table input[name="postal-code1"] {
+    width: 35%;
+  }
+  .form__table input[name="postal-code2"] {
+    width: 45%;
+  }
+  .form__table label {
+    display: inline-block;
+    margin: 8px 0 4px;
+  }
+  .form__table .item {
+    margin: 0;
+  }
+  .form__table textarea {
+    width: 100%;
+  }
+  .form__submit {
+    width: 75%;
+    font-size: 1.5rem;
+    margin-top: 16px;
+  }
+  .form__submit input {
+    width: 100%;
+    padding: 0.75em 1em;
+  }
 }
 /*# sourceMappingURL=style.css.map */
