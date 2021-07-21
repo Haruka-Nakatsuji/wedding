@@ -62,7 +62,7 @@ ScrollReveal().reveal(".loca__text", {
   viewFactor: 0.4,
 });
 
-const locaBg = ["url(../images/loca_2.jpeg)", "url(../images/loca_1.jpeg)"];
+const locaBg = ["url(./images/loca_2.jpeg)", "url(./images/loca_1.jpeg)"];
 const locaTitle = ["大物ルーキーですが・・・", "ゴールデングラブ賞とれますよ"];
 const locaText = [
   "このドレスをきてからは、三振することがなくなりました！",
