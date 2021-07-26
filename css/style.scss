@@ -175,7 +175,7 @@ p + p {
   bottom: 0;
   width: $header-size;
   height: 100vh;
-  z-index: 1000;
+  z-index: 999;
   // background-color: $main-color;
   text-align: center;
   font-size: 1.125rem;
@@ -249,6 +249,115 @@ p + p {
   }
 }
 
+.hdmob {
+  display: none;
+  position: fixed;
+  top:0;
+  width: 100%;
+  height: 64px;
+  z-index: 999;
+  transition: .4s all;
+
+  &.change {
+    background: $main-color;
+
+    .hdmob__logo {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  &__top {
+    margin-left: 8px;
+    vertical-align: middle;
+  }
+
+  &__logo {
+    visibility: hidden;
+    opacity: 0;
+    width: 56px;
+    transition: .4s all;
+  }
+
+  &__flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+
+  &__ham {
+    position: relative;
+    height: 64px;
+    width: 64px;
+    background: $main-color;
+
+    span {
+      position: absolute;
+      width: 50%;
+      height: 2px;
+      left: 50%;
+      background: #fff;
+      transform: translate(-50%, -50%);
+
+      &:first-child {
+        top: 35%;
+      }
+
+      &:nth-child(2) {
+        top: 50%;
+      }
+
+      &:last-child {
+        top: 65%;
+      }
+    }
+  }
+
+  .navmob {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 64px;
+    width: 100%;
+    height: calc(100% - 64px);
+    max-height: 0%;
+    background: $btn-color;
+    text-align: center;
+    font-size: 1.55rem;
+    overflow: hidden;
+    transition: .4s all;
+
+    &.open {
+      max-height: 100%;
+    }
+
+    &--inner {
+      width: 80%;
+    }
+
+    &__list {
+      margin-bottom: 88px;
+
+      li {
+        margin-bottom: calc(1.5em - 6px);
+        line-height: 1em;
+        
+        a {
+          display: block;
+          width: 100%;
+        }
+      }
+    }
+
+    &__contact-btn {
+      @include main-button(100%, $main-color);
+      font-size: 1.55rem;
+    }
+  }
+}
+
 // main ------------------------------------------
 
 main {
@@ -258,6 +367,18 @@ main {
 // hero ------------------------------------------
 
 .hero {
+
+  &__sitename {
+    position: absolute;
+    top: 45%;
+    left: calc(50% - 140px);
+    width: 70%;
+    text-align: center;
+    transform: translate(-50%,-50%);
+    z-index: 100;
+    @-webkit-keyframes animate-svg-fill-1{0%{fill:transparent}100%{fill:rgb(90,73,76)}}@keyframes animate-svg-fill-1{0%{fill:transparent}100%{fill:rgb(90,73,76)}}.sitename-img-1{-webkit-animation:animate-svg-fill-1 0.6s cubic-bezier(0.47,0,0.745,0.715) 0s both;animation:animate-svg-fill-1 0.6s cubic-bezier(0.47,0,0.745,0.715) 0s both}@-webkit-keyframes animate-svg-fill-2{0%{fill:transparent}100%{fill:rgb(90,73,76)}}@keyframes animate-svg-fill-2{0%{fill:transparent}100%{fill:rgb(90,73,76)}}.sitename-img-2{-webkit-animation:animate-svg-fill-2 0.6s cubic-bezier(0.47,0,0.745,0.715) 0.1s both;animation:animate-svg-fill-2 0.6s cubic-bezier(0.47,0,0.745,0.715) 0.1s both}@-webkit-keyframes animate-svg-fill-3{0%{fill:transparent}100%{fill:rgb(90,73,76)}}@keyframes animate-svg-fill-3{0%{fill:transparent}100%{fill:rgb(90,73,76)}}.sitename-img-3{-webkit-animation:animate-svg-fill-3 0.6s cubic-bezier(0.47,0,0.745,0.715) 0.2s both;animation:animate-svg-fill-3 0.6s cubic-bezier(0.47,0,0.745,0.715) 0.2s both}@-webkit-keyframes animate-svg-fill-4{0%{fill:transparent}100%{fill:rgb(90,73,76)}}@keyframes animate-svg-fill-4{0%{fill:transparent}100%{fill:rgb(90,73,76)}}.sitename-img-4{-webkit-animation:animate-svg-fill-4 0.6s cubic-bezier(0.47,0,0.745,0.715) 0.30000000000000004s both;animation:animate-svg-fill-4 0.6s cubic-bezier(0.47,0,0.745,0.715) 0.30000000000000004s both}@-webkit-keyframes animate-svg-fill-5{0%{fill:transparent}100%{fill:rgb(90,73,76)}}@keyframes animate-svg-fill-5{0%{fill:transparent}100%{fill:rgb(90,73,76)}}.sitename-img-5{-webkit-animation:animate-svg-fill-5 0.6s cubic-bezier(0.47,0,0.745,0.715) 0.4s both;animation:animate-svg-fill-5 0.6s cubic-bezier(0.47,0,0.745,0.715) 0.4s both}@-webkit-keyframes animate-svg-fill-6{0%{fill:transparent}100%{fill:rgb(90,73,76)}}@keyframes animate-svg-fill-6{0%{fill:transparent}100%{fill:rgb(90,73,76)}}.sitename-img-6{-webkit-animation:animate-svg-fill-6 0.6s cubic-bezier(0.47,0,0.745,0.715) 0.5s both;animation:animate-svg-fill-6 0.6s cubic-bezier(0.47,0,0.745,0.715) 0.5s both}@-webkit-keyframes animate-svg-fill-7{0%{fill:transparent}100%{fill:rgb(90,73,76)}}@keyframes animate-svg-fill-7{0%{fill:transparent}100%{fill:rgb(90,73,76)}}.sitename-img-7{-webkit-animation:animate-svg-fill-7 0.6s cubic-bezier(0.47,0,0.745,0.715) 0.6000000000000001s both;animation:animate-svg-fill-7 0.6s cubic-bezier(0.47,0,0.745,0.715) 0.6000000000000001s both}
+}
+
   &__bg {
     width: 100%;
     height: 100%;
@@ -344,6 +465,7 @@ main {
   position: relative;
   overflow: hidden;
   padding-top: 88px;
+  line-height: 1.5;
 
   &__bg {
     &--top {
@@ -395,6 +517,13 @@ main {
     padding: 80px;
     background: #fff $bg-texture;
     box-shadow: 2px 2px 10px -3px rgba(0, 0, 0, 0.3);
+  }
+
+  strong {
+    display: block;
+    margin-bottom: 1em;
+    text-align: center;
+    font-size: 1.25rem;
   }
 }
 
@@ -1076,11 +1205,21 @@ main {
     display: none;
   }
 
+  .hdmob {
+    display: block;
+  }
+
   .sec-w {
     width: 100%;
   }
 
   .hero {
+    &__sitename {
+      width: 90%;
+      top: 8px * 18;
+      left: 50%;
+    }
+
     &__bg {
       width: 92%;
       margin: 0 auto;
@@ -1089,7 +1228,40 @@ main {
     }
 
     &__catch {
-      font-size: 1.75rem;
+      top: 30%;
+      font-size: 1.5rem;
+      line-height: 1.75em;
+
+      &--1, &--2 {
+        padding: 8px 0;
+        background: #fff;
+      }
+    }
+  }
+
+  .about {
+    display: block;
+    height: auto;
+    background: #fff;
+    padding: 64px 0;
+
+    &__desc {
+      position: static;
+      width: 100%;
+      height: auto;
+      padding: 0 4%;
+      background: none;
+      box-shadow: none;
+      transform: none;
+    }
+
+    &__bg {
+      &--top {
+        display: none;
+      }
+      &--bottom {
+        display: none;
+      }
     }
   }
 
@@ -1104,7 +1276,7 @@ main {
     }
 
     &__panel-area {
-      width: 92%;
+      width: 90%;
     }
 
     &__panels {
@@ -1112,7 +1284,8 @@ main {
       height: auto;
 
       li {
-        margin-bottom: 16px;
+        height: 320px;
+        margin-bottom: 24px;
       }
     }
   }

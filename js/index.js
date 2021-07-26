@@ -4,7 +4,7 @@ const jpStyle = gsap.timeline({
   scrollTrigger: {
     trigger: ".about",
     start: "top 70%",
-    end: "top 20%",
+    end: "center 30%",
     scrub: true,
   },
 });
@@ -46,14 +46,17 @@ collePanel.to(".colle__panel--s", { duration: 0.4, opacity: 1, y: -20 });
 
 const hd = document.querySelector(".hd");
 const hdBtn = document.querySelector(".nav__contact-btn");
+const hdmob = document.querySelector(".hdmob");
 
 window.addEventListener("scroll", () => {
   if (pageYOffset >= innerHeight / 4) {
     // hd.style.backgroundColor = '#9f2624';
     hd.classList.add("change");
+    hdmob.classList.add("change");
   } else {
     // hd.style.backgroundColor = '#eee6de';
     hd.classList.remove("change");
+    hdmob.classList.remove("change");
   }
 });
 
@@ -63,10 +66,10 @@ ScrollReveal().reveal(".loca__text", {
 });
 
 const locaBg = ["url(./images/loca_2.jpeg)", "url(./images/loca_1.jpeg)"];
-const locaTitle = ["大物ルーキーですが・・・", "ゴールデングラブ賞とれますよ"];
+const locaTitle = ["友人に褒められました！", "最高の結婚式になりました。"];
 const locaText = [
-  "このドレスをきてからは、三振することがなくなりました！",
-  "どんな球でもキャッチできるようになりました。TeamUmenoにもおすすめしようと思います。",
+  "白無垢ドレスをきたのですが、個性的かつ美しく、思わず見惚れてしまいました（笑）。デザインはさっぱりなのですが、デザイナーの方がいて安心しました。",
+  "一部のみ和柄にしてもらいました。派手すぎないデザインもあり最高です。花嫁登場の時に歓声が！友人におすすめしようと思います！",
 ];
 const locaName = ["佐藤輝様", "梅野様"];
 
@@ -189,3 +192,19 @@ accordionsArr.forEach((accordion) => {
     });
   });
 });
+
+
+const hamburger = document.querySelector('.hdmob__ham');
+const navmob = document.querySelector('.navmob');
+
+hamburger.addEventListener('click', () => {
+  navmob.classList.toggle('open');
+});
+
+document.querySelectorAll('.navmob__list li').forEach(item => {
+  item.addEventListener('click', () => {
+    navmob.classList.remove('open');
+  });
+});
+
+document.querySelector('.hero').style.height = window.innerHeight;
