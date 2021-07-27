@@ -390,6 +390,7 @@ p + p {
   top: 64px;
   width: 100%;
   height: calc(100% - 64px);
+  height: 0;
   max-height: 0%;
   background: #d9ab42;
   text-align: center;
@@ -716,6 +717,14 @@ main {
   overflow: hidden;
   padding-top: 88px;
   line-height: 1.5;
+}
+
+.about__desc {
+  width: 60%;
+}
+
+.about__desc p:last-child {
+  text-align: right;
 }
 
 .about__bg--top {

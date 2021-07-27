@@ -53,10 +53,12 @@ window.addEventListener("scroll", () => {
     // hd.style.backgroundColor = '#9f2624';
     hd.classList.add("change");
     hdmob.classList.add("change");
+    document.querySelector('.hd__logo').src = './images/logo_wh.svg';
   } else {
     // hd.style.backgroundColor = '#eee6de';
     hd.classList.remove("change");
     hdmob.classList.remove("change");
+    document.querySelector('.hd__logo').src = './images/logo.svg';
   }
 });
 
@@ -65,13 +67,14 @@ ScrollReveal().reveal(".loca__text", {
   viewFactor: 0.4,
 });
 
-const locaBg = ["url(./images/loca_2.jpeg)", "url(./images/loca_1.jpeg)"];
-const locaTitle = ["友人に褒められました！", "最高の結婚式になりました。"];
+const locaBg = ["url(./images/loca_2.jpeg)",  "url(./images/loca_1.jpeg)","url(./images/loca_3.jpeg)",];
+const locaTitle = ["友人に褒められました！", "最高の結婚式になりました。", "ド派手な結婚式",];
 const locaText = [
   "白無垢ドレスをきたのですが、個性的かつ美しく、思わず見惚れてしまいました（笑）。デザインはさっぱりなのですが、デザイナーの方がいて安心しました。",
   "一部のみ和柄にしてもらいました。派手すぎないデザインもあり最高です。花嫁登場の時に歓声が！友人におすすめしようと思います！",
+  "お色直しで和ドレスをきてみんなの前にでたとき、ワア！という声が聞こえてきて、してやったりって感じです！特におばあちゃんが喜んでいました。",
 ];
-const locaName = ["佐藤輝様", "梅野様"];
+const locaName = ["佐藤輝様", "藤浪様", "梅野様"];
 
 let locaBgNum = 0;
 
