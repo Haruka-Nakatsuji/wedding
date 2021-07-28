@@ -210,4 +210,10 @@ document.querySelectorAll('.navmob__list li').forEach(item => {
   });
 });
 
-document.querySelector('.hero').style.height = window.innerHeight;
+window.addEventListener('load', () => {
+  document.querySelector('.hero').style.height = window.innerHeight;
+});
+
+window.addEventListener('resize', () => {
+  document.querySelector('.hero').style.height = window.innerHeight;
+});

@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @import url("https://cdn.jsdelivr.net/npm/destyle.css@2.0.2/destyle.css");
 @import url("https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&display=swap");
-.ChangeButtonsBg::before, .hd .nav__contact-btn::before, .hd .nav__contact-btn::after, .hdmob .navmob__contact-btn::before, .hdmob .navmob__contact-btn::after, .colle__btn::before, .colle__btn::after, .contact__btn::before, .contact__btn::after, .form__submit::before, .form__submit::after {
+.ChangeButtonsBg::before, .hd .nav__contact-btn::before, .hd .nav__contact-btn::after, .navmob__contact-btn::before, .navmob__contact-btn::after, .colle__btn::before, .colle__btn::after, .contact__btn::before, .contact__btn::after, .form__submit::before, .form__submit::after {
   display: block;
   content: "";
   position: absolute;
@@ -196,6 +196,7 @@ p + p {
 .hd__title {
   font-size: 1rem;
   text-align: left;
+  font-size: 0.1px;
 }
 
 .hd__logo {
@@ -307,9 +308,9 @@ p + p {
   top: 0;
   width: 100%;
   height: 64px;
-  z-index: 999;
   -webkit-transition: .4s all;
   transition: .4s all;
+  z-index: 999;
 }
 
 .hdmob.change {
@@ -345,6 +346,7 @@ p + p {
       -ms-flex-align: center;
           align-items: center;
   height: 100%;
+  z-index: 1000;
 }
 
 .hdmob__ham {
@@ -376,7 +378,7 @@ p + p {
   top: 65%;
 }
 
-.hdmob .navmob {
+.navmob {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -387,10 +389,9 @@ p + p {
       -ms-flex-align: center;
           align-items: center;
   position: fixed;
-  top: 64px;
+  top: 0px;
   width: 100%;
-  height: calc(100% - 64px);
-  height: 0;
+  height: 100%;
   max-height: 0%;
   background: #d9ab42;
   text-align: center;
@@ -398,31 +399,32 @@ p + p {
   overflow: hidden;
   -webkit-transition: .4s all;
   transition: .4s all;
+  z-index: 600;
 }
 
-.hdmob .navmob.open {
+.navmob.open {
   max-height: 100%;
 }
 
-.hdmob .navmob--inner {
+.navmob--inner {
   width: 80%;
 }
 
-.hdmob .navmob__list {
+.navmob__list {
   margin-bottom: 88px;
 }
 
-.hdmob .navmob__list li {
+.navmob__list li {
   margin-bottom: calc(1.5em - 6px);
   line-height: 1em;
 }
 
-.hdmob .navmob__list li a {
+.navmob__list li a {
   display: block;
   width: 100%;
 }
 
-.hdmob .navmob__contact-btn {
+.navmob__contact-btn {
   display: inline-block;
   position: relative;
   width: 100%;
@@ -434,12 +436,12 @@ p + p {
   font-size: 1.55rem;
 }
 
-.hdmob .navmob__contact-btn a {
+.navmob__contact-btn a {
   display: block;
   padding: 0.75em 1em;
 }
 
-.hdmob .navmob__contact-btn::before {
+.navmob__contact-btn::before {
   background: #9f2624 url("../images/bg_texture.png") fixed;
   -webkit-transform: translateX(0%);
           transform: translateX(0%);
@@ -447,12 +449,12 @@ p + p {
   transition: all 0.4s;
 }
 
-.hdmob .navmob__contact-btn:hover::before {
+.navmob__contact-btn:hover::before {
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
 }
 
-.hdmob .navmob__contact-btn::after {
+.navmob__contact-btn::after {
   background: #b42b29 url("../images/bg_texture.png") fixed;
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
@@ -460,7 +462,7 @@ p + p {
   transition: all 0.4s;
 }
 
-.hdmob .navmob__contact-btn:hover::after {
+.navmob__contact-btn:hover::after {
   -webkit-transform: translateX(0);
           transform: translateX(0);
 }
