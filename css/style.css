@@ -1685,6 +1685,9 @@ main {
     height: auto;
     padding: 64px 0;
   }
+  .colle--inner {
+    width: 100%;
+  }
   .colle__sub-title {
     width: 90%;
     padding-right: 1em;

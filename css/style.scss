@@ -1281,6 +1281,10 @@ main {
     height: auto;
     padding: 64px 0;
 
+    &--inner {
+      width: 100%;
+    }
+
     &__sub-title {
       width: 90%;
       padding-right: 1em;
