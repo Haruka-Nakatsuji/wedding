@@ -107,7 +107,7 @@ window.addEventListener("DOMContentLoaded", () => {
     if (locaBgNum === 2) {
       locaBgNum = 0;
     }
-  }, 30000);
+  }, 20000);
 });
 
 // アコーディオンメニュー（めんどくさかったからコピペ⭐︎） -----------------------------------
@@ -196,6 +196,7 @@ accordionsArr.forEach((accordion) => {
   });
 });
 
+// コピペ終わり
 
 const hamburger = document.querySelector('.hdmob__ham');
 const navmob = document.querySelector('.navmob');
@@ -216,4 +217,33 @@ window.addEventListener('load', () => {
 
 window.addEventListener('resize', () => {
   document.querySelector('.hero').style.height = window.innerHeight;
+});
+
+//モータル？？
+
+const dressimgs = [
+  "./images/s_1.jpeg",
+  "./images/s_2.jpeg",
+  "./images/s-3.jpeg",
+  "./images/s-4.jpeg",
+];
+const dressNames = [
+  "主役/華",
+  "SAN-SHI-SUI-MEI",
+  "グラデーションドレス",
+  "SHIROMUKU",
+];
+
+document.querySelectorAll('.colle__panels li').forEach((item, index) => {
+  item.addEventListener('click', () => {
+    document.querySelector('.colle__modal img').src = dressimgs[index];
+    document.querySelector('.colle__modal-text').textContent = dressNames[index];
+    document.querySelector('.colle__modal').classList.add('add');
+    document.querySelector('.colle__modal-bg').classList.add('add');
+  });
+});
+
+document.querySelector('.colle__modal-bg').addEventListener('click', () => {
+  document.querySelector('.colle__modal').classList.remove('add');
+  document.querySelector('.colle__modal-bg').classList.remove('add');
 });
